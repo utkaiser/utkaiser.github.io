@@ -1,0 +1,29 @@
+- university: The University of Texas at Austin
+  years: 2023-2027
+  degree: Ph.D. in Computational Mathematics (CSEM)
+  location: Austin, TX
+  description:
+    - Advised by **Richard Tsai**.
+    - Member of the Scientific ML Group.
+- university: University of Wuerzburg
+  years: 2021-2023
+  degree: M.S. in Mathematics and Computer Science
+  location: Wuerzburg, Germany
+  description:
+    - Advised by **Richard Tsai** (UT) and **Christian Klingenberg**.
+    - "Thesis: \"Efficient Numerical Wave Propagation Enhanced By An End-to-End Deep Learning Model\"."
+- university: The University of Texas at Austin
+  years: 2021-2022
+  degree: Exchange Program in Computer Science
+  location: Austin, TX
+- university: Norwegian School of Economics
+  years: 2021
+  degree: Exchange Program in Data Science
+  location: Bergen, Norway
+- university: Technical University of Munich and University of Wuerzburg
+  years: 2017-2021
+  degree: B.S. in Mathematics and Economics
+  location: Wuerzburg, Germany
+  description:
+    - Advised by **Andreas Hotho**, **Julian Tritscher**, and **Padraig Davidson**.
+    - "Thesis: \"Evaluation and Improvement of Deep Reinforcement Learning Agents for Algorithmic Trading\"."

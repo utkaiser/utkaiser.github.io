@@ -1,0 +1,320 @@
+---
+layout: cv
+permalink: /cv/
+title: CV
+---
+
+<section class="container">
+
+<h1><a href="{{ absolute_url }}/">Luis Kaiser</a></h1>
+
+<small class="live-link">Last updated in <time datetime="{{ site.time }}">{{ site.time | date: '%B %Y'}}</time>. Get the latest version at <a href="{{ '/cv' | absolute_url }}">https://luiskaiser.com/cv</a>.</small>
+
+<div class="header-columns">
+  <div>
+    <p>
+      Ph.D. Student at The University of Texas at Austin<br/>
+    </p>
+  </div>
+  <div>
+    <ul class="right-align">
+      <li><a href="{{ absolute_url }}/">https://luiskaiser.com</a></li>
+      <li><a href="mailto:lkaiser@utexas.ed">lkaiser@utexas.edu</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<h2>Research Area</h2>
+
+<p>
+To make sense of the world using data, I combine methods from numerical analysis, deep learning and partial differential equations.
+
+My long-term goal is to 1) develop novel training algorithms to enhance numerical solvers with deep learning (e.g., wave propagation)
+2) apply deep reinforcement learning and Monte Carlo tree search strategies to game theory problems (e.g., hide-and-seek games).
+</p>
+
+
+<h2>Positions</h2>
+
+{% assign filtered_positions = site.data.positions | where_exp:'item','item.hidden == null' %}
+{% for pos in filtered_positions %}
+  <div class="date-container">
+    <span class="date">{{ pos.years | replace: "-", "–" }}</span>
+    <strong class="fill">{{pos.company}}</strong>
+    <span class="right">{{ pos.location }}</span>
+  </div>
+  <div class="details">
+    {{pos.title}}{% if pos.short_desc %}, {{ pos.short_desc | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %},
+    {{pos.description | markdownify | remove: '<p>' | remove: '</p>' }}
+  </div>
+  <!-- <p>
+    {% if pos.mentors %}
+      Mentor{% if pos.mentors.size > 1 %}s{% endif %}: {% for mentor in pos.mentors %}
+        {% include person person=mentor %}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}<br/>
+    {% endif %}
+    {{ pos.description | markdownify | remove: '<p>' | remove: '</p>' }}
+    {% if pos.skills %}
+    <small class="muted">[{% for skill in pos.skills %}{{ skill }}{% unless forloop.last %}, {% endunless %}{% endfor %}]</small>
+    {% endif %}
+  </p> -->
+{% endfor %}
+
+
+<h2>Education</h2>
+
+{% for ed in site.data.education %}
+  <div class="date-container">
+    <span class="date">{{ ed.years | replace: "-", "–" }}</span>
+    <strong class="fill">{{ ed.degree }}, {{ ed.university }}</strong>
+    <span class="right">{{ ed.location }}</span>
+  </div>
+  <p class="details">
+    {% for des in ed.description %}
+      <span>{{ des | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% unless forloop.last %}<br/>{% endunless %}
+    {% endfor %}
+  </p>
+{% endfor %}
+
+{% comment %}
+<h2>Notable Awards</h2>
+
+{% for award in site.data.awards %}
+  <div class="date-container">
+    <span class="date">{{ award.years | replace: "-", "–" }}</span>
+    <strong class="fill">{{ award.name }}</strong>
+    <span class="right">{{ award.sponsor }}</span>
+  </div>
+  <p class="muted">
+    {{ award.description }}
+  </p>
+{% endfor %}
+{% endcomment %}
+
+
+<h2>Publications <a href="{{ '/publications/' | absolute_url }}">[Interactive Version]</a></h2>
+
+{% assign sorted_pubs = site.publications | reverse %}
+
+{% assign types = "Conference|Thesis" | split: "|" %}
+{% for type in types %}
+  {% assign counter = 1 %}
+  {% for pub in sorted_pubs %}
+    {% if pub.type[0] == type %}
+      {% assign counter = counter | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  <h3 class="pub-type">
+    {{ type }}
+  </h3>
+
+  {% for pub in sorted_pubs %}
+    {% if pub.type[0] == type %}
+      {% assign counter = counter | minus: 1 %}
+      <div class="pub">
+        <div class="ref-container">{{ type | slice: 0 }}{{ counter }}</div>
+        <strong class="fill">{% if pub.pdf %}<a href="{{ pub.pdf }}" target="_blank">{{ pub.title }}</a>{% elsif pub.arxiv %}<a href="https://arxiv.org/pdf/{{ pub.arxiv | cgi_escape }}.pdf" target="_blank">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</strong>
+        <div>
+          {% for author in pub.authors %}{% include person person=author %}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+          {% if pub.venue or pub.description %}<i>{% if pub.description %}{{ pub.description | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %}{{ pub.venue }}</i>{% if pub.venue %},{% endif %} {% endif %}{{ pub.year }}.
+
+          {% if pub.link or pub.pdf or pub.arxiv or pub.video or pub.blog or pub.slides or pub.doi %}
+            <div class="extra-links">
+            {% if pub.pdf %}
+              <a href="{{ pub.pdf }}" target="_blank">
+                <i class="far fa-file-pdf" aria-hidden="true"></i> PDF
+              </a>
+            {% elsif pub.arxiv %}
+              <a href="https://arxiv.org/pdf/{{ pub.arxiv | cgi_escape }}.pdf" target="_blank">
+                <i class="far fa-file-pdf" aria-hidden="true"></i> PDF
+              </a>
+            {% endif %}
+            {% if pub.link %}
+              <a href="{{ pub.link }}" target="_blank">
+                <i class="fas fa-link" aria-hidden="true"></i> Project
+              </a>
+            {% endif %}
+            {% if pub.blog %}
+              <a href="{{ pub.blog }}" target="_blank">
+                <i class="fas fa-newspaper" aria-hidden="true"></i> Article
+              </a>
+            {% endif %}
+            {% if pub.video %}
+              <a href="{{ pub.video }}" target="_blank">
+                <i class="fas fa-film" aria-hidden="true"></i> Video
+              </a>
+            {% endif %}
+            {% if pub.code %}
+              <a href="{{ pub.code }}" target="_blank">
+                <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+              </a>
+            {% endif %}
+            {% if pub.doi %}
+              <a href="https://www.doi2bib.org/bib/{{ pub.doi }}" target="_blank">
+                <i class="fas fa-book" aria-hidden="true"></i> Bibtex
+              </a>
+            {% elsif pub.arxiv %}
+              <a href="https://arxiv2bibtex.org/?q={{ pub.arxiv | cgi_escape }}" target="_blank">
+                <i class="fas fa-book" aria-hidden="true"></i> Bibtex
+              </a>
+            {% endif %}
+            </div>
+          {% endif %}
+
+          {% for award in pub.awards %}<strong class="award"><i class="fas fa-{% if award == "Best Paper Award" %}trophy{% else %}award{% endif %}" aria-hidden="true"></i> {{ award }}</strong>{% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% comment %}
+<h2>Patents</h2>
+
+{% for patent in site.data.patents %}
+  <div class="date-container">
+    <span class="date">{{ patent.date | date: "%b %Y" }}</span>
+    <h3><a href="{{ patent.url }}" target="_blank">{{ patent.title }}</a></h3>
+  </div>
+  <div class="patent">
+    <p>
+      {% for author in patent.authors %}
+        {% include person person=author %}{% unless forloop.last %}, {% endunless %}
+      {% endfor %}
+    </p>
+  </div>
+{% endfor %}
+
+<h2>Student Mentoring</h2>
+
+{% assign filtered_mentoring = site.data.mentoring | where_exp:'item','item.hidden == null' %}
+{% for mentor in filtered_mentoring %}
+  {% if mentor.names %}
+    <div class="date-container">
+      <span class="date">{{ mentor.year | replace: "-", "–" }}</span>
+      <h3>{{ mentor.relation }}</h3>
+      <span class="right">{{ mentor.location }}</span>
+    </div>
+    {% if mentor.note %}
+      <p class="muted">{{ mentor.note }}</p>
+    {% endif %}
+    <ul>
+    {% for person in mentor.names %}
+      <li>{% include person person=person %}</li>
+    {% endfor %}
+    </ul>
+  {% else %}
+    <div class="date-container">
+      <span class="date">{{ mentor.year | replace: "-", "–" }}</span>
+      <h3>{% include person person=mentor.name %}</h3>
+      <span class="right">{{ mentor.location }}</span>
+    </div>
+    <p>{{ mentor.relation }}. {% if mentor.note %}<span class="muted">{{ mentor.note }}</span>{% endif %}</p>
+  {% endif %}
+{% endfor %}
+{% endcomment %}
+
+<h2>Talks </h2>
+
+{% assign talktitles = site.data.talks | group_by:"title" %}
+{% for title in talktitles %}
+  <h3 class="cv-talk-title">{{ title.name }}</h3>
+  {% assign sorted_talks = title.items | sort: 'date' | reverse %}
+  {% for talk in sorted_talks %}
+    <div class="date-container">
+      <time datetime="{{ talk.date }}">{{ talk.date | date: "%b %Y" }}</time>
+      <span class="fill">{{ talk.location }}{% if talk.city %}, <small class="muted">{{ talk.city }}</small>{% endif %}</span>
+
+    </div>
+  {% endfor %}
+{% endfor %}
+
+
+<h2>Teaching</h2>
+
+{% for teach in site.data.teaching %}
+  <div class="date-container">
+    <span class="date">{{ teach.year }}</span>
+    <strong class="fill">{{ teach.title }}</strong>
+    <span class="right">{{ teach.location }}</span>
+  </div>
+  <p>
+    {% if teach.students %}
+      {% if teach.role %}{{ teach.role }}{% endif %}{% if teach.professor %} for {% include person person=teach.professor %}{% endif %},
+      {{ teach.students }}
+      <br/>
+    {% endif %}
+    <span class="muted">
+      {{ teach.description | markdownify | remove: '<p>' | remove: '</p>' }}
+    </span>
+  </p>
+{% endfor %}
+
+{% comment %}
+<h2>Service</h2>
+
+<p>
+</p>
+{% endcomment %}
+
+<!-- <h2>Relevant Coursework</h2>
+
+{% for institution in site.data.courses %}
+<div>
+  <h3>{{ institution.title }}</h3>
+  <div>
+    <ul>
+      {% for course in institution.courses %}<li>{{ course.title }}{% if course.with %}<span class="muted"> ({% include person person=course.with %})</span>{% endif %}</li>{% endfor %}
+    </ul>
+  </div>
+</div>
+{% endfor %} -->
+
+
+<!-- <h2>References</h2>
+
+<div class="refs">
+  <p>
+    <strong>Jeffrey Heer</strong><br/>
+    Professor of Computer Science & Engineering<br/>
+    <i>University of Washington</i><br/>
+    <a href="https://homes.cs.washington.edu/~jheer/">homes.cs.washington.edu/~jheer/</a>
+  </p>
+
+  <p>
+    <strong>Bill Howe</strong><br/>
+    Professor at the Information School<br/>
+    <i>University of Washington</i><br/>
+    <a href="https://faculty.washington.edu/billhowe/">faculty.washington.edu/billhowe/</a>
+  </p>
+
+  <p>
+    <strong>Danyel Fisher</strong><br/>
+    Principal Design Researcher<br/>
+    <i>Honeycomb</i><br/>
+    Former Senior Researcher at Microsoft Research<br/>
+    <a href="https://danyelfisher.info/">danyelfisher.info/</a>
+  </p>
+
+  <p>
+    <strong>Tim Kraska</strong><br/>
+    Professor of Electrical Engineering & Computer Science<br/>
+    <i>Massachusetts Institute of Technology</i><br/>
+    <a href="https://people.csail.mit.edu/kraska/">people.csail.mit.edu/kraska/</a>
+  </p>
+
+  <p>
+    <strong>Steven Franconeri</strong><br/>
+    Professor of Psychology<br/>
+    <i>Northwestern University</i><br/>
+    <a href="https://psychology.northwestern.edu/people/faculty/core/profiles/steven-franconeri.html">psychology.northwestern.edu/people/faculty/core/profiles/steven-franconeri.html</a>
+  </p>
+</div> -->
+
+</section>
+
+<div style="padding-top: 40px;"></div>
+
+{% include footer.html %}

@@ -1,0 +1,25 @@
+- title: Hide-and-Seek
+  highlight: true
+  image: surveillance.png
+  description: "A Multi-Agent Reinforcement Learning Surveillance-Evasion Problem using MCTS and Hamiltonian-Jacobi Equations."
+
+- title: Deep Waves
+  code: https://github.com/utkaiser/Deep-Wave-Propagation
+  highlight: true
+  image: wave.png
+  description: "Scalable Wave Simulations in 2D aided by Deep Learning and a self-recursive training algorithm."
+  paper: https://arxiv.org/pdf/2402.02304
+
+- title: AI Ice Hockey
+  code: https://github.com/utkaiser/deep_ice_hockey_agent
+  highlight: true
+  image: icehockey.png
+  description: "A ResNet model with DAgger for a state-based approach in 2v2 SuperTuxKart Ice Hockey."
+  paper: https://www.luiskaiser.com/papers/2021_paper_dagger_supertux.pdf
+
+- title: NeuroTrader
+  code: https://github.com/utkaiser/neurotrader_thesis
+  highlight: true
+  image: trading.png
+  description: "Deep Q-Learning for Trading during volatile market phases, including the pandemic."
+  paper: https://github.com/utkaiser/neurotrader_thesis/blob/main/final.pdf

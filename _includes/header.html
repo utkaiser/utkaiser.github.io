@@ -1,0 +1,17 @@
+{% assign current = page.url | downcase | split: '/' %}
+<header class="page-header">
+  <nav class="container">
+    {% unless current[1] == nil or current[1] == '' or current[1] == 'cv' %}
+      <a class="site-title" href="{{ '/' | relative_url }}" 
+         {% if current[1] == nil or current[1] == '' %}aria-current="page"{% endif %}>
+        {{ site.title }}
+      </a>
+    {% endunless %}
+
+    <div class="nav-links">
+      <a href="{{ '/' | relative_url }}" {% if current[1] == nil or current[1] == '' %}aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/projects/' | relative_url }}" {% if current[1] == 'projects' %}aria-current="page"{% endif %}>Projects</a>
+      <a href="{{ '/cv/' | relative_url }}" {% if current[1] == 'cv' %}aria-current="page"{% endif %}>CV</a>
+    </div>
+  </nav>
+</header>

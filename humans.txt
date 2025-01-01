@@ -1,0 +1,10 @@
+/* TEAM */
+	Author/Theme: Luis Kaiser
+	Twitter: @luiskaiser_
+	From: Austin, TX
+
+/* SITE */
+	Language: English / German
+	Doctype: HTML5
+	IDE: Sublime Text, VIM, VSCode
+	Software: Jekyll
