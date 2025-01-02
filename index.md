@@ -7,7 +7,7 @@ class: home
 #  Hi, I am Luis Kaiser
 <div class="columns" markdown="1">
 <div class="intro" markdown="1">
-I'm Luis, a Ph.D. Student in the [Oden Institute](https://oden.utexas.edu/) at [The University of Texas at Austin](https://www.utexas.edu/). I design, develop, and evaluate deep physical modeling and RL in game theory advised by [Richard Tsai](https://web.ma.utexas.edu/users/ytsai/).
+I'm a Ph.D. Student in the [Oden Institute](https://oden.utexas.edu/) at [The University of Texas at Austin](https://www.utexas.edu/). I design, develop, and evaluate deep physical modeling and RL in game theory advised by [Richard Tsai](https://web.ma.utexas.edu/users/ytsai/).
 
 I received my B.Sc. and M.Sc. in Mathematics at [Technical University of Munich](https://www.tum.de/) and [University of Wuerzburg](https://www.uni-wuerzburg.de/) where I worked on RL-based trading and deep learning training algorithms for wave simulation. 
 
