@@ -4,7 +4,7 @@ email: lkaiser@utexas.edu
 description: > # this means to ignore newlines until "baseurl:"
    PhD Student at The University of Texas at Austin
 url: "https://luiskaiser.com" # the base hostname & protocol for your site
-baseurl: /utkaiser.github.io
+baseurl: ""
 production_url: "https://luiskaiser.com"
 github_username: utkaiser
 permalink: /blog/:year/:month/:title.html
