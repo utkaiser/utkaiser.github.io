@@ -1,4 +1,3 @@
-@use "sass:color";
 
 // Our variables
 $base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -17,12 +16,12 @@ $yellow-color:      #ffc000;
 $link-color:        #0e4d7c;
 $header-background: #ececec;
 $footer-background: #234;
-$footer-text:       color.adjust(#fff, $lightness: -10%);
+$footer-text:       darken(#fff, 10%);
 
 $grey-color:       #6b6b6b;
 $grey-color-lightest: #f8f8f8;
-$grey-color-dark:  color.adjust($grey-color, $lightness: -15%);
-$grey-color-light:  color.adjust($grey-color, $lightness: 15%);
+$grey-color-dark:  darken($grey-color, 15%);
+$grey-color-light:  lighten($grey-color, 15%);
 
 $on-palm:          600px;
 $on-laptop:        800px;
