@@ -9,7 +9,7 @@ class: projects
 # Projects
 
 {:.lead}
-Here are some representative projects which I have worked on. A complete list of my publications is listed <a href="#bottom">at the bottom</a>. The most up-to-date publication list can be found in my [Google Scholar site](https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en). 
+Here are some representative projects which I have worked on. A complete list of my publications is provided <a href="#bottom">at the bottom</a>. The most up-to-date publication list is available on my [Google Scholar profile](https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en). 
 
 <div class="grid">
   {% for project in site.data.projects %}

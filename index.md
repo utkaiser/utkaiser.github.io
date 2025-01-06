@@ -32,8 +32,8 @@ class: home
     <a href="https://github.com/utkaiser" target="_blank">
       <i class="fa-brands fa-github" aria-hidden="true" style="font-size: 1.4em;"></i>
     </a>
-    <a href="https://www.instagram.com/luiskaiser_/" target="_blank">
-      <i class="fa-brands fa-instagram" aria-hidden="true" style="font-size: 1.4em;"></i>
+    <a href="https://www.linkedin.com/in/luiskaiser/" target="_blank">
+      <i class="fa-brands fa-linkedin" aria-hidden="true" style="font-size: 1.4em;"></i>
     </a>
   </div>
 </div>
