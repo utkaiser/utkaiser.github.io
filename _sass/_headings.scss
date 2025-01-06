@@ -4,7 +4,7 @@
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1.2em;
   margin-bottom: 0.6em;
-  color: darken($grey-color, 10%);
+  color: darken($grey-color, 25%);
   font-weight: 500;
 }
 
@@ -24,7 +24,7 @@ h2 {
   border-bottom: 1.5px solid lighten($grey-color, 50%);
   margin-top: 0.2em;
   font-weight: 500;
-  color: darken($grey-color, 30%);
+  color: darken($grey-color, 25%);
 }
 
 h3 {
