@@ -7,13 +7,14 @@ class: home
 # Hi, I am Luis Kaiser
 <div class="columns" markdown="1">
 <div class="intro" markdown="1">
-I'm a Ph.D. Student in the [Oden Institute](https://oden.utexas.edu/) at [The University of Texas at Austin](https://www.utexas.edu/). I design, develop, and evaluate deep physical modeling and RL in game theory advised by [Richard Tsai](https://web.ma.utexas.edu/users/ytsai/).
+<p>I'm a Ph.D. Student in the <a href="https://oden.utexas.edu/">Oden Institute</a> at <a href="https://www.utexas.edu/">The University of Texas at Austin</a>. I design, develop, and evaluate deep physical modeling and RL in game theory advised by <a href="https://web.ma.utexas.edu/users/ytsai/">Richard Tsai</a>.</p>
 
-I received my B.Sc. and M.Sc. in Mathematics at [Technical University of Munich](https://www.tum.de/) and [University of Wuerzburg](https://www.uni-wuerzburg.de/) where I worked on RL-based trading and deep learning training algorithms for wave simulation. 
+<p>I received my B.Sc. and M.Sc. in Mathematics at <a href="https://www.tum.de/">Technical University of Munich</a> and <a href="https://www.uni-wuerzburg.de/">University of Wuerzburg</a> where I worked on RL-based trading and deep learning training algorithms for wave simulation.</p>
 
-I was also a Data Scientist at [Bloomberg LP](https://www.bloomberg.com) in London, UK in the Analyst Workflow Team.
+<p>I was also a Data Scientist at <a href="https://www.bloomberg.com">Bloomberg LP</a> in London, UK in the Analyst Workflow Team.</p>
 
-In my free time, I play soccer and read.
+<p>In my free time, I play soccer and read.</p>
+
 </div>
 <div class="me" markdown="1" style="text-align: center;">
   <picture>
