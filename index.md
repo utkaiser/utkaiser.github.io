@@ -4,7 +4,7 @@ title: "Home"
 class: home
 ---
 
-#  Hi, I am Luis Kaiser
+# Hi, I am Luis Kaiser
 <div class="columns" markdown="1">
 <div class="intro" markdown="1">
 I'm a Ph.D. Student in the [Oden Institute](https://oden.utexas.edu/) at [The University of Texas at Austin](https://www.utexas.edu/). I design, develop, and evaluate deep physical modeling and RL in game theory advised by [Richard Tsai](https://web.ma.utexas.edu/users/ytsai/).
