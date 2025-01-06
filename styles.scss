@@ -36,6 +36,10 @@ $on-laptop:        800px;
   }
 }
 
+link[rel="icon"] {
+  border-radius: 50%;
+}
+
 body {
     font-family: $base-font-family;
 }
