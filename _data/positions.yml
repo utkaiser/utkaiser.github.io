@@ -1,4 +1,4 @@
-- title: Research Scientist
+- title: PhD Research Scientist
   years: 2022-2026
   company: The University of Texas at Austin
   location: Austin, TX
@@ -12,14 +12,19 @@
   years: 2020
   company: University of Wuerzburg
   location: Wuerzburg, Germany
-  description: advised by Andreas Hotho
+  description: advised by Andreas Hotho working on reinforcement learning
 - title: Data Scientist
   years: 2019-2020
   company: Cosmo Consult
   location: Wuerzburg, Germany
-  description: worked on ML projects for global clients
+  description: worked on ML and optimization projects for global clients
 - title: Data Analyst
   years: 2020
   company: KPMG
   location: Munich, Germany
   description: part of the Financial Services Team
+- title: Research Scientist
+  years: 2019
+  company: University of Wuerzburg
+  location: Wuerzburg, Germany
+  description: part of the DeepScan team to detect fraud in large-scale systems
