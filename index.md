@@ -11,7 +11,7 @@ class: home
 
 <p>I received my B.Sc. and M.Sc. in Mathematics at <a href="https://www.tum.de/">Technical University of Munich</a> and <a href="https://www.uni-wuerzburg.de/">University of Wuerzburg</a> where I worked on machine learning-based trading and deep learning training algorithms for wave simulation.</p>
 
-<p>I was also a Software Engineer at <a href="https://www.bloomberg.com">Bloomberg LP</a> in London, UK in the Analyst Workflow Team where I developed data-driven financial and ESG solutions.</p>
+<p>I was also a Software Engineer at <a href="https://www.bloomberg.com">Bloomberg LP</a> in London, UK in the Analyst Workflow Team where I built data-driven financial and research solutions.</p>
 
 <p>In my free time, I play soccer and read.</p>
 
