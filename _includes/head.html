@@ -4,8 +4,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="application-name" content="{{ site.title }}">
   <meta name="theme-color" content="#234">
+  <meta property="og:image" content="{{ '/images/lkaiser_profile.jpeg' | relative_url }}" />
   <link rel="shortcut icon" href="{{ '/images/favicon.ico' | relative_url }}"/>
   <link rel="icon" href="{{ '/images/favicon.ico' | relative_url }}"/>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Luis Kaiser",
+      "image": "{{ '/images/lkaiser_profile.jpeg' | relative_url }}",
+      "url": "https://luiskaiser.com"
+    }
+    </script>
 
   {% seo %}
 
@@ -13,4 +23,5 @@
 
   <link href="https://use.fontawesome.com/releases/v6.6.0/css/all.css" rel="stylesheet">
   <link href="{{ '/styles.css' | relative_url }}" rel="stylesheet">
+
 </head>
