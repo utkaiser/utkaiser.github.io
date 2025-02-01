@@ -9,9 +9,9 @@
     {% endunless %}
 
     <div class="nav-links">
-      <a href="{{ '/' | relative_url }}" {% if current[1] == nil or current[1] == '' %}aria-current="page"{% endif %}>Home</a>
-      <a href="{{ '/projects/' | relative_url }}" {% if current[1] == 'projects' %}aria-current="page"{% endif %}>Projects</a>
-      <a href="{{ '/cv/' | relative_url }}" {% if current[1] == 'cv' %}aria-current="page"{% endif %}>CV</a>
+      <a href="{{ '/' | relative_url }}" {% if current[1] == nil or current[1] == '' %}aria-current="page"{% endif %}>about</a>
+      <a href="{{ '/research/' | relative_url }}" {% if current[1] == 'research' %}aria-current="page"{% endif %}>research</a>
+      <a href="{{ '/cv/' | relative_url }}" {% if current[1] == 'cv' %}aria-current="page"{% endif %}>cv</a>
     </div>
   </nav>
 </header>

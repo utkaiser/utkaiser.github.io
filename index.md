@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "Home"
+title: "about"
 class: home
 ---
 
-# Hi, I am Luis Kaiser
+# <span style="padding-top: 15px; display: block;">Hi, I am Luis Kaiser
 <div class="columns" markdown="1">
 <div class="intro" markdown="1">
 <p>I'm a Ph.D. Student in <a href="https://oden.utexas.edu/academics/phd-program/">Computational Mathematics</a> at the <a href="https://oden.utexas.edu/">Oden Institute</a>, <a href="https://www.utexas.edu/">The University of Texas at Austin</a>. I currently design deep physical modeling and reinforcement learning in game theory advised by <a href="https://web.ma.utexas.edu/users/ytsai/">Richard Tsai</a>.</p>
@@ -42,7 +42,7 @@ class: home
 </div>
 
 
-## Featured <a href="{{ "/projects/" | relative_url }}">Projects</a>
+## Featured <a href="{{ "/research/" | relative_url }}">Publications</a>
 
 <div class="featured-projects">
   {% assign sorted_projects = site.data.projects | sort: 'highlight' %}
@@ -53,7 +53,7 @@ class: home
   {% endfor %}
 </div>
 
-<a href="{{ "/projects/" | relative_url }}" class="button">
+<a href="{{ "/research/" | relative_url }}" class="button">
   <i class="fas fa-chevron-circle-right"></i>
   Show More
 </a>

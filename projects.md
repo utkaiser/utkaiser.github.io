@@ -1,12 +1,12 @@
 ---
 layout: page
-permalink: /projects/
-title: Projects
+permalink: /research/
+title: research
 class: projects
 ---
 
 {:.hidden}
-# Projects
+# Publications
 
 {:.lead}
 Here are some representative projects which I have worked on. A complete list of my publications is provided <a href="#bottom">at the bottom</a>. The most up-to-date publication list is available on my [Google Scholar profile](https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en). 
