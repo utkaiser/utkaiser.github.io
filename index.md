@@ -4,7 +4,7 @@ title: "About"
 class: home
 ---
 
-# <span style="padding-top: 15px; display: block;">Hi, I am Luis Kaiser
+# <span style="padding-top: 8px; display: block;">Hi, I am Luis Kaiser
 <div class="columns" markdown="1">
 <div class="intro" markdown="1">
 <p>I'm a Ph.D. Student in <a href="https://oden.utexas.edu/academics/phd-program/">Computational Mathematics</a> at the <a href="https://oden.utexas.edu/">Oden Institute</a>, <a href="https://www.utexas.edu/">The University of Texas at Austin</a>. I currently design deep physical modeling and reinforcement learning in game theory advised by <a href="https://web.ma.utexas.edu/users/ytsai/">Richard Tsai</a>.</p>
