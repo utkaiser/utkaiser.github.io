@@ -1,30 +1,25 @@
-- title: PhD Research Scientist
-  years: 2022-2026
+- title: PhD AI Research Scientist
+  years: 2022-present
   company: The University of Texas at Austin
   location: Austin, TX
-  description: advised by Richard Tsai
+  description: 'Oden Institute (Advisor: <a href="https://scholar.google.se/citations?user=6yls9oMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Richard Tsai</a>)' 
 - title: Software Engineer
   years: 2023-2024
   company: Bloomberg
   location: London, UK and New York, US
-  description: part of the Analyst Workflow Team, building financial and disruptive technology research solutions for BloombergNEF
-- title: Research Scientist
-  years: 2020
+  description: "AI modeling and forecasting systems"
+- title: Research Scientist Intern
+  years: 2021
   company: University of Wuerzburg
   location: Wuerzburg, Germany
-  description: advised by Andreas Hotho working on reinforcement learning
-- title: Data Scientist
-  years: 2019-2020
-  company: Cosmo Consult
+  description: "RL research at Data Science Lab (Advisor: <a href='https://scholar.google.com/citations?user=eWTzXFAAAAAJ&hl=en' target='_blank' rel='noopener noreferrer'>Andreas Hotho</a>)"
+- title: Data Science Intern 
+  years: 2020
+  company: Cosmo Consult (formerly max-con data science)
   location: Wuerzburg, Germany
-  description: worked on ML and optimization projects for global clients
-- title: Data Analyst
+  description: agentic systems research for an acquired startup 
+- title: Data Science Intern 
   years: 2020
   company: KPMG
   location: Munich, Germany
-  description: part of the Financial Services Team
-- title: Research Scientist
-  years: 2019
-  company: University of Wuerzburg
-  location: Wuerzburg, Germany
-  description: part of the DeepScan team to detect fraud in large-scale systems
+  description: statistical risk prediction and stochastic long-term pricing

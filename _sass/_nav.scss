@@ -1,65 +1,64 @@
-
 .page-header {
-  border-top: 10px solid $brand-color;
-  padding-top: 6px;
-  margin-bottom: 40px;
+  border-bottom: 1px solid $grey-color-light;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
 }
 
 nav {
   display: flex;
   align-items: center;
   flex-flow: row wrap;
-  line-height: 36px;
+  line-height: 1;
   justify-content: space-between;
 
   & > *:last-child {
     margin-left: auto;
   }
 
+  .site-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: $dark-text-color;
+    text-decoration: none;
+    margin-right: 2rem;
+  }
+
   a {
-    color: #333;
-    padding: 12px 0.3em 0 0.3em;
-    margin: 0 0.3em;
+    color: $text-color;
+    padding: 0.5rem 0;
+    margin: 0 1rem 0 0;
     display: inline-block;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 400;
 
-    opacity: 0.75;
-    border-bottom: 1px solid transparent;
-
-    transition: opacity 0.25s ease-in-out, border 0.25s ease-in-out;
-
-    &:last-child {
-      padding-right: 0;
-    }
-    &[aria-current] {
-      border-bottom-color: #333;
-      opacity: 1;
-    }
-    &:hover {
-      text-decoration: none;
-
-      opacity: 1;
-      border-bottom-color: #333;
-
-      transition: opacity 0.25s ease-in-out, border 0.25s ease-in-out;
+    &:not(.site-title) {
+      &[aria-current] {
+        color: $brand-color;
+        font-weight: 500;
+      }
+      
+      &:hover {
+        color: $brand-color;
+        text-decoration: underline;
+      }
     }
   }
 
   .external {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 1rem;
     justify-content: center;
   }
 
   .site-title {
     font-weight: 500;
-    margin-top: 10px;
     padding: 0;
     margin-left: 0;
     margin-right: $spacing-unit;
     flex: 0 0 auto;
-    font-size: 1.6em;
+    font-size: 1.5em;
     border: none;
 
     color: #333;
@@ -121,12 +120,12 @@ nav {
 
       &:hover {
         border-color: transparent;
-        background: lighten($grey-color, 55%);
+        background: lighten($brand-color, 55%);
       }
 
       &[aria-current] {
         border-color: transparent;
-        background: lighten($grey-color, 50%);
+        background: lighten($brand-color, 50%);
         border-radius: 3px;
       }
     }

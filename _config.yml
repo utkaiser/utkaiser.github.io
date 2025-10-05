@@ -1,16 +1,29 @@
 # Site settings
 title: Luis Kaiser
-email: lkaiser@utexas.edu
-description: > # this means to ignore newlines until "baseurl:"
-   PhD Student at The University of Texas at Austin
-url: "https://luiskaiser.com" # the base hostname & protocol for your site
+author: Luis Kaiser
+email: lkaiser (at) utexas.edu
+description: >
+   PhD Student at The University of Texas at Austin working on reinforcement learning and applied math.
+url: "https://luiskaiser.com"
 baseurl: ""
+lang: en-US
+logo: /images/profile/lkaiser_profile.jpeg
 production_url: "https://luiskaiser.com"
 github_username: utkaiser
-permalink: /blog/:year/:month/:title.html
+
+social:
+  name: Luis Kaiser
+  links:
+    - https://x.com/luiskaiser_
+    - https://www.linkedin.com/in/luiskaiser/
+    - https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en
+    - https://www.researchgate.net/profile/Luis-Kaiser-6?ev=prf_overview
+    - https://github.com/utkaiser
 
 twitter:
   username: luiskaiser_
+
+permalink: /blog/:year/:month/:title.html
 
 sass:
   style: compressed
@@ -18,9 +31,6 @@ sass:
 collections:
   publications:
     output: false
-
-jekyll-mentions:
-  base_url: https://twitter.com
 
 plugins:
   - jekyll-sitemap

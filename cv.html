@@ -13,13 +13,14 @@ title: CV
 <div class="header-columns">
   <div>
     <p>
-      Ph.D. Student at The University of Texas at Austin<br/>
+      PhD Student at The University of Texas at Austin<br/>
     </p>
   </div>
   <div>
     <ul class="right-align">
-      <li><a href="{{ absolute_url }}/">https://luiskaiser.com</a></li>
-      <li><a href="mailto:lkaiser@utexas.ed">lkaiser@utexas.edu</a></li>
+      <li>lkaiser (at) utexas.edu</li>
+      <li><a href="https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en" target="_blank">Google Scholar</a>, <a href="https://github.com/utkaiser" target="_blank">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/luiskaiser/" target="_blank">LinkedIn</a>, <a href="https://x.com/luiskaiser_" target="_blank">X</a></li>
     </ul>
   </div>
 </div>
@@ -28,10 +29,11 @@ title: CV
 <h2>Research Area</h2>
 
 <p>
-I am broadly interested in machine learning, computational mathematics and reinforcement learning.
+I am broadly interested in robotics, generative modeling and applied mathematics.
+<br>
+My long-term goals are to i) design novel reinforcement learning algorithms that use general purpose foundation models (language, vision or multimodal), and
+ii) ground deep learning in mathematical principles through partial differential equations.
 
-My long-term goals are to 1) develop novel training algorithms to enhance numerical solvers for partial differential equations with deep learning (e.g., wave propagation)
-2) apply deep reinforcement learning and Monte Carlo tree search strategies to game theory problems (e.g., hide-and-seek games).
 </p>
 
 
@@ -45,8 +47,7 @@ My long-term goals are to 1) develop novel training algorithms to enhance numeri
     <span class="right">{{ pos.location }}</span>
   </div>
   <div class="details">
-    {{pos.title}}{% if pos.short_desc %}, {{ pos.short_desc | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %},
-    {{pos.description | markdownify | remove: '<p>' | remove: '</p>' }}
+    {{pos.title}}{% if pos.short_desc %}{{ pos.short_desc | markdownify | remove: '<p>' | remove: '</p>' }}{% endif %}, {{pos.description | markdownify | remove: '<p>' | remove: '</p>' }}
   </div>
   <!-- <p>
     {% if pos.mentors %}
@@ -66,37 +67,20 @@ My long-term goals are to 1) develop novel training algorithms to enhance numeri
 
 {% for ed in site.data.education %}
   <div class="date-container">
-    <span class="date">{{ ed.years | replace: "-", "–" }}</span>
+    <span class="date">{{ ed.years }}</span>
     <strong class="fill">{{ ed.degree }}, {{ ed.university }}</strong>
     <span class="right">{{ ed.location }}</span>
   </div>
   <p class="details">
     {% for des in ed.description %}
-      <span>{{ des | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% unless forloop.last %}<br/>{% endunless %}
+      <span style="margin-right: 10px;">&bull; {{ des | markdownify | remove: '<p>' | remove: '</p>' }}</span>{% unless forloop.last %}<br/>{% endunless %}
     {% endfor %}
   </p>
 {% endfor %}
 
-{% comment %}
-<h2>Notable Awards</h2>
-
-{% for award in site.data.awards %}
-  <div class="date-container">
-    <span class="date">{{ award.years | replace: "-", "–" }}</span>
-    <strong class="fill">{{ award.name }}</strong>
-    <span class="right">{{ award.sponsor }}</span>
-  </div>
-  <p class="muted">
-    {{ award.description }}
-  </p>
-{% endfor %}
-{% endcomment %}
-
 
 <h2>Publications</h2>
-
 {% assign sorted_pubs = site.publications | reverse %}
-
 {% assign types = "Conference|Thesis" | split: "|" %}
 {% for type in types %}
   {% assign counter = 1 %}
@@ -105,11 +89,7 @@ My long-term goals are to 1) develop novel training algorithms to enhance numeri
       {% assign counter = counter | plus: 1 %}
     {% endif %}
   {% endfor %}
-
-  <h3 class="pub-type">
-    {{ type }}
-  </h3>
-
+  <h3 class="pub-type">{{ type }}</h3>
   {% for pub in sorted_pubs %}
     {% if pub.type[0] == type %}
       {% assign counter = counter | minus: 1 %}
@@ -122,18 +102,9 @@ My long-term goals are to 1) develop novel training algorithms to enhance numeri
 
           {% if pub.link or pub.pdf or pub.arxiv or pub.video or pub.blog or pub.slides or pub.doi %}
             <div class="extra-links">
-            {% if pub.pdf %}
-              <a href="{{ pub.pdf }}" target="_blank">
-                <i class="far fa-file-pdf" aria-hidden="true"></i> PDF
-              </a>
-            {% elsif pub.arxiv %}
-              <a href="https://arxiv.org/pdf/{{ pub.arxiv | cgi_escape }}.pdf" target="_blank">
-                <i class="far fa-file-pdf" aria-hidden="true"></i> PDF
-              </a>
-            {% endif %}
             {% if pub.link %}
               <a href="{{ pub.link }}" target="_blank">
-                <i class="fas fa-link" aria-hidden="true"></i> Project
+                <i class="fas fa-link" aria-hidden="true"></i> Paper
               </a>
             {% endif %}
             {% if pub.blog %}
@@ -149,6 +120,11 @@ My long-term goals are to 1) develop novel training algorithms to enhance numeri
             {% if pub.code %}
               <a href="{{ pub.code }}" target="_blank">
                 <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+              </a>
+            {% endif %}
+            {% if pub.arxiv %}
+              <a href="https://arxiv.org/pdf/{{ pub.arxiv | cgi_escape }}.pdf" target="_blank">
+                <i class="far fa-file-pdf" aria-hidden="true"></i> arXiv
               </a>
             {% endif %}
             {% if pub.doi %}
@@ -188,7 +164,6 @@ My long-term goals are to 1) develop novel training algorithms to enhance numeri
 {% endfor %}
 
 <h2>Student Mentoring</h2>
-
 {% assign filtered_mentoring = site.data.mentoring | where_exp:'item','item.hidden == null' %}
 {% for mentor in filtered_mentoring %}
   {% if mentor.names %}
@@ -216,40 +191,48 @@ My long-term goals are to 1) develop novel training algorithms to enhance numeri
 {% endfor %}
 {% endcomment %}
 
-<h2>Talks </h2>
 
+<h2>Talks</h2>
 {% assign talktitles = site.data.talks | group_by:"title" %}
 {% for title in talktitles %}
   <h3 class="cv-talk-title">{{ title.name }}</h3>
   {% assign sorted_talks = title.items | sort: 'date' | reverse %}
   {% for talk in sorted_talks %}
     <div class="date-container">
-      <time datetime="{{ talk.date }}">{{ talk.date | date: "%b %Y" }}</time>
-      <span class="fill">{{ talk.location }}{% if talk.city %}, <small class="muted">{{ talk.city }}</small>{% endif %}</span>
-
+      <time datetime="{{ talk.date }}" style="position: relative; top: -23px;">{{ talk.date | date: "%b %Y" }}</time>
+      <span class="fill"><span class="muted">{{ talk.location }}{% if talk.city %}, {{ talk.city }}{% endif %}</span></span>
     </div>
   {% endfor %}
 {% endfor %}
 
 
 <h2>Teaching</h2>
-
 {% for teach in site.data.teaching %}
   <div class="date-container">
     <span class="date">{{ teach.year }}</span>
     <strong class="fill">{{ teach.title }}</strong>
     <span class="right">{{ teach.location }}</span>
   </div>
-  <p>
+
+  <p class="muted" style="margin-bottom: 0;">
     {% if teach.students %}
       {% if teach.role %}{{ teach.role }}{% endif %}{% if teach.professor %} for {% include person person=teach.professor %}{% endif %},
       {{ teach.students }}
-      <br/>
+    {% elsif teach.description %}
+      {{ teach.description }}
     {% endif %}
-    <span class="muted">
-      {{ teach.description | markdownify | remove: '<p>' | remove: '</p>' }}
-    </span>
   </p>
+
+  {% if teach.bullets %}
+    <div style="margin-left: 100px; margin-top: 0px; margin-bottom: 12px;" class="muted">
+      {% for bullet in teach.bullets %}
+        <p style="margin-bottom: 0px;">
+          <span style="margin-right: 2px;">&bull;</span> {{ bullet }}
+        </p>
+      {% endfor %}
+    </div>
+  {% endif %}
+
 {% endfor %}
 
 {% comment %}
@@ -259,59 +242,21 @@ My long-term goals are to 1) develop novel training algorithms to enhance numeri
 </p>
 {% endcomment %}
 
-<!-- <h2>Relevant Coursework</h2>
 
-{% for institution in site.data.courses %}
-<div>
-  <h3>{{ institution.title }}</h3>
-  <div>
-    <ul>
-      {% for course in institution.courses %}<li>{{ course.title }}{% if course.with %}<span class="muted"> ({% include person person=course.with %})</span>{% endif %}</li>{% endfor %}
-    </ul>
+<h2>Awards</h2>
+{% for award in site.data.awards %}
+  <div class="date-container">
+    <span class="date">{{ award.years | replace: "-", "–" }}</span>
+    <strong class="fill">{{ award.name }}</strong>
+    <span class="right">{{ award.sponsor }}</span>
   </div>
-</div>
-{% endfor %} -->
-
-
-<!-- <h2>References</h2>
-
-<div class="refs">
-  <p>
-    <strong>Jeffrey Heer</strong><br/>
-    Professor of Computer Science & Engineering<br/>
-    <i>University of Washington</i><br/>
-    <a href="https://homes.cs.washington.edu/~jheer/">homes.cs.washington.edu/~jheer/</a>
+  <p class="muted">
+    {{ award.description }}
   </p>
+{% endfor %}
 
-  <p>
-    <strong>Bill Howe</strong><br/>
-    Professor at the Information School<br/>
-    <i>University of Washington</i><br/>
-    <a href="https://faculty.washington.edu/billhowe/">faculty.washington.edu/billhowe/</a>
-  </p>
 
-  <p>
-    <strong>Danyel Fisher</strong><br/>
-    Principal Design Researcher<br/>
-    <i>Honeycomb</i><br/>
-    Former Senior Researcher at Microsoft Research<br/>
-    <a href="https://danyelfisher.info/">danyelfisher.info/</a>
-  </p>
 
-  <p>
-    <strong>Tim Kraska</strong><br/>
-    Professor of Electrical Engineering & Computer Science<br/>
-    <i>Massachusetts Institute of Technology</i><br/>
-    <a href="https://people.csail.mit.edu/kraska/">people.csail.mit.edu/kraska/</a>
-  </p>
-
-  <p>
-    <strong>Steven Franconeri</strong><br/>
-    Professor of Psychology<br/>
-    <i>Northwestern University</i><br/>
-    <a href="https://psychology.northwestern.edu/people/faculty/core/profiles/steven-franconeri.html">psychology.northwestern.edu/people/faculty/core/profiles/steven-franconeri.html</a>
-  </p>
-</div> -->
 
 </section>
 

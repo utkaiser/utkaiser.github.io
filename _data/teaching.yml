@@ -1,4 +1,13 @@
-- title: "Introduction to Algorithms and Data Structures"
-  location: University of Wuerzburg
-  role: Instructor
-  year: 2019
+- title: "Computational Systems Senior Design"
+  location: "The University of Texas at Austin"
+  year: Fall 2025
+  description: "Co-led student engineering teams with <a href='https://www.ae.utexas.edu/people/faculty/faculty-directory/mahalingam' target='_blank' rel='noopener noreferrer'>Raghav Mahalingam</a>.<br>Capstone industry projects included:"
+  bullets:
+    - Spacecraft prototype modeling (Southwest Research Institute)
+    - Drone-based monitoring system (Clarke Lab)
+    - Estimation system for a satellite in orbit (Aegis Aerospace)
+
+- title: "Algorithms and Data Structures"
+  location: "University of Wuerzburg"
+  year: Fall 2019
+  description: "Designed and co-taught CS curriculum lead by <a href='https://scholar.google.com/citations?user=eWTzXFAAAAAJ&hl=en' target='_blank' rel='noopener noreferrer'>Andreas Hotho</a>"

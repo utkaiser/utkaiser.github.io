@@ -1,14 +1,17 @@
-- name: University of Texas at Austin Graduate School Tuition-Waiver
+- name: University of Texas at Austin Graduate Scholarship
   years: 2021-2022
-  description: "For academic success and leadership."
+  description: "Merit-based tuition waiver for graduate studies in Computer Science."
 
 - name: UT A-League Men’s Soccer Champion in Spring 2022
   years: 2022
-  description: ""
-  
-- name: E-fellows Scholarship
-  years: 2017
-  description: "For high-achieving talents based on career potential and achievements"
+  description: "Team captain in top-division league."
 
+- name: UT Austin Autonomous Multi-Agent Neural Networks Price
+  years: 2021
+  description: "RL Computer Vision Competition - 2v2 SuperTuxKart Ice Hockey <a href=\"https://github.com/utkaiser/deep_ice_hockey_agent\" target=\"_blank\" rel=\"noopener noreferrer\">[details]</a>."
+
+- name: E-fellows Scholarship
+  years: 2017-Present
+  description: "Based on academic achievements and leadership for German high potentials."
 
 

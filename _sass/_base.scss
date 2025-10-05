@@ -1,6 +1,8 @@
 /**
  * Basic styling
  */
+
+
 html, body {
   width: 100%;
   min-height: 100vh;
@@ -76,9 +78,9 @@ img {
  * Hyphenation and paragraph styles
  */
 p {
-  -webkit-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
   margin-bottom: 0.8em;
 }
 

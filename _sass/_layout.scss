@@ -3,7 +3,7 @@
  */
 
 .container {
-  max-width: $content-width + 2 * $spacing-unit;
+  max-width: $content-width;
   margin: 0 auto;
   padding: 0 $spacing-unit;
 }
@@ -15,14 +15,18 @@
 }
 
 .page-content {
-  padding-bottom: 3em;
+  padding-bottom: 3rem;
   flex: 1 1 auto;
 }
 
 @include media-query($on-palm) {
   .container {
-    max-width: $content-width + $spacing-unit;
-    margin: 0 auto;
-    padding: 0 calc($spacing-unit/2);
+    padding: 0 $spacing-unit/2;
   }
 }
+
+.contact-info {
+  line-height: 1.5;
+  margin-top: .7em;
+}
+

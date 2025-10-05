@@ -1,6 +1,6 @@
 ---
 ---
 User-agent: *
-Disallow: /octopress/
+Allow: /
 
-Sitemap: {{ site.url }}/sitemap.xml
+Sitemap: https://luiskaiser.com/sitemap.xml

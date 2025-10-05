@@ -8,23 +8,18 @@ authors:
   - Christian Klingenberg
 type:
   - Conference
-venue: ENUMATH23
+tags:
+  - Deep Learning
+  - Numerical Methods
+  - Wave Propagation
+  - Partial Differential Equations
+venue: ENUMATH23, Springer Nature
 venue_location: Lisbon, Portugal
 venue_url: https://enumath2023.com/
 arxiv: "2402.02304"
-pdf: https://arxiv.org/pdf/2402.02304
+paper: https://link.springer.com/chapter/10.1007/978-3-031-86169-7_2
+arxiv_code: https://arxiv.org/abs/2402.02304
 code: https://github.com/utkaiser/Deep-Wave-Propagation
+image: images/projects/wave.png
+link: https://link.springer.com/chapter/10.1007/978-3-031-86169-7_2
 ---
-
-In a variety of scientific and engineering domains, the need for high-fidelity
-and efficient solutions for high-frequency wave propagation holds great significance.
-Recent advances in wave modeling use sufficiently accurate fine solver outputs to
-train a neural network that enhances the accuracy of a fast but inaccurate coarse solver.
-In this paper we build upon the work of Nguyen and Tsai (2023) and present a novel
-unified system that integrates a numerical solver with a deep learning component
-into an end-to-end framework. In the proposed setting, we investigate refinements
-to the network architecture and data generation algorithm. A stable and fast solver
-further allows the use of Parareal, a parallel-in-time algorithm to correct high-
-frequency wave components. Our results show that the cohesive structure improves
-performance without sacrificing speed, and demonstrate the importance of temporal
-dynamics, as well as Parareal, for accurate wave propagation.

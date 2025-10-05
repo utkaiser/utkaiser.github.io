@@ -1,5 +1,6 @@
 
 #cv {
+  font-size: 1rem;
   line-height: 1.5;
   overflow: scroll;
 
@@ -23,18 +24,18 @@
 
   h1, h2, .pub-type {
     color: $brand-color;
-    margin: 1rem 0 .2rem 0;
+    margin: 1.5rem 0 .2rem 0;
   }
 
   h1, h1>a:hover {
     margin-top: 2rem;
     font-weight: 600;
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   h2 a {
@@ -97,7 +98,7 @@
       margin-top: 0.2rem;
 
       a {
-        color: $grey-color-light;
+        color: $grey-color;
         margin-right: 4px;
 
         // avoid the extra whitespace after the link text
@@ -238,7 +239,10 @@
     }
   }
   h1 {
-    margin-top: -8px; /* Adjust the value to move it higher */
+    margin-top: -3px;
+  }
+  h2 + .pub-type {
+  margin-top: 0.5rem;
   }
 }
 
