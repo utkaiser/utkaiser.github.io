@@ -5,8 +5,7 @@ title: Research
 class: _publications
 ---
 
-
-Here is an introduction into the projects I am involved in. A complete list of my publications is provided <a href="#bottom">at the bottom</a> or on <a href="{{ site.google_scholar }}" target="_blank">Google Scholar</a>. 
+Here is an introduction into the projects I am involved in. A complete list of my publications is provided <a href="#bottom">at the bottom</a> or on <a href="https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en" target="_blank">Google Scholar</a>. 
 
 
 ## Learning from Experience
@@ -28,8 +27,8 @@ Here is an introduction into the projects I am involved in. A complete list of m
 ## High-dimensional Scientific Computing
 
 <div class="wrap-container">
-  <div style="float: left; width: 230px; margin-right: 25px;">
-    <img src="/images/projects/wave_3d.png" alt="3D Wave Simulation" class="wrapped-image"
+  <div style="float: left; width: 240px; margin-right: 25px;">
+    <img src="/images/projects/wave_3d_2.png" alt="3D Wave Simulation" class="wrapped-image"
          style="width: 100%; margin-bottom: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
   </div>
   <p markdown="1">

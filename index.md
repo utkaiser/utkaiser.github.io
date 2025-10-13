@@ -11,7 +11,7 @@ class: home
 
 <p>I completed my B.Sc. and M.Sc. in Mathematics at <a href="https://www.tum.de/" target="_blank" rel="noopener noreferrer">Technical University of Munich (TUM)</a> and <a href="https://www.uni-wuerzburg.de/" target="_blank" rel="noopener noreferrer">University of Wuerzburg</a>. For my <a href="https://link.springer.com/chapter/10.1007/978-3-031-86169-7_2" target="_blank" rel="noopener noreferrer">master's thesis</a>, I developed multi-step gradient descent for deep physical modeling advised by <a href="https://scholar.google.com/citations?user=S6MCm88AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Christian Klingenberg</a>. For my <a href="https://github.com/utkaiser/neurotrader_thesis" target="_blank" rel="noopener noreferrer">bachelor's thesis</a>, I created a method to stabilize policy convergence of a deep reinforcement agent from sparse, stochastic rewards together with <a href="https://scholar.google.de/citations?user=eWTzXFAAAAAJ" target="_blank" rel="noopener noreferrer">Andreas Hotho</a>.</p>
 
-<p>I was also a Software Engineer at <a href="https://www.bloomberg.com" target="_blank" rel="noopener noreferrer">Bloomberg</a> in London where I built large-scale AI research and forecasting systems.</p>
+<p>I was also a Software Engineer at <a href="https://www.bloomberg.com/company/what-we-do/engineering-cto/" target="_blank" rel="noopener noreferrer">Bloomberg</a> in London where I built large-scale AI research and forecasting systems.</p>
 
 </div>
 
@@ -25,8 +25,8 @@ class: home
   </picture>
   <p class="contact-info" >
     lkaiser (at) utexas.edu<br>
-    <a href="{{ site.google_scholar }}" target="_blank">Google Scholar</a>,
-    <a href="{{ site.linkedin }}" target="_blank">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en" target="_blank">Google Scholar</a>,
+    <a href="https://www.linkedin.com/in/luiskaiser/" target="_blank">LinkedIn</a>
   </p>
 
 </div>

@@ -386,6 +386,10 @@
       }
     }
 
+    h1 {
+      text-align: center;
+    }
+
     .button {
       font-size: 1.1em;
       background-color: lighten($brand-color, 57%);
@@ -430,4 +434,5 @@
       }
     }
   }
+
 }
