@@ -5,8 +5,7 @@ title: Research
 class: _publications
 ---
 
-Here is an introduction into the projects I am involved in. A complete list of my publications is provided <a href="#bottom">at the bottom</a> or on <a href="https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en" target="_blank">Google Scholar</a>. 
-
+Here is an introduction into the projects I am involved in. A complete list of my publications is provided <a href="#bottom">at the bottom</a> or on <a href="https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en" target="_blank">Google Scholar</a>.
 
 ## Learning from Experience
 
