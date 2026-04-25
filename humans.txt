@@ -1,7 +1,7 @@
 /* TEAM */
 	Author/Theme: Luis Kaiser
 	Twitter: @luiskaiser_
-	From: Austin, TX
+	From: San Francisco, CA
 
 /* SITE */
 	Language: English / German
