@@ -9,7 +9,7 @@ class: home
 <div class="intro" markdown="1">
 <p>I am a PhD student in <a href="https://oden.utexas.edu/academics/phd-program/"  target="_blank" rel="noopener noreferrer">Computational Mathematics and AI</a> at the <a href="https://oden.utexas.edu/" target="_blank" rel="noopener noreferrer">Oden Institute</a>, <a href="https://www.utexas.edu/"  target="_blank" rel="noopener noreferrer">The University of Texas at Austin</a> advised by <a href="https://scholar.google.se/citations?user=6yls9oMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Richard Tsai</a>. My focus is AI for science and applied mathematics.</p>
 
-<p>Currently at <a href="https://x.company/" target="_blank" rel="noopener noreferrer">Google [X], the moonshot factory</a>, I build AI researchers - agentic systems that self-improve recursively and drive scientific discovery end-to-end - for an undisclosed project in finance and decarbonization.</p>
+<p>Currently at <a href="https://x.company/" target="_blank" rel="noopener noreferrer">Google [X], the moonshot factory</a>, I build AI researchers - agentic systems that self-improve recursively and drive scientific discovery end-to-end -<br> for an undisclosed project in finance and decarbonization.</p>
 
 
 <p>Previously I was a Software Engineer at <a href="https://www.bloomberg.com/company/what-we-do/engineering-cto/" target="_blank" rel="noopener noreferrer">Bloomberg</a> in London where I built large-scale AI forecasting systems.
