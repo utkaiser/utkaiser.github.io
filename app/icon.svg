@@ -4,11 +4,11 @@
 >
   <rect width="32" height="32" fill="#09090b"/>
   <path
-    d="M6.5 6.5v19h8.25M18.5 6.5v19M27 6.5 18.5 16 27 25.5"
+    d="M3.5 4.5v8h4.25M10.25 4.5v8M15.25 4.5l-5 4 5 4"
     fill="none"
     stroke="#fafafa"
     stroke-linecap="round"
     stroke-linejoin="round"
-    stroke-width="2.25"
+    stroke-width="1.25"
   />
 </svg>
