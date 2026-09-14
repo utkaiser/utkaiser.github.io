@@ -69,7 +69,7 @@ export default function Home() {
             <AnimatedRole>AI Researcher</AnimatedRole>
           </div>
           <aside
-            className="flex w-48 shrink-0 flex-col items-center gap-3 sm:absolute sm:right-0 sm:top-2.5 sm:w-[148px]"
+            className="relative z-10 flex w-48 shrink-0 flex-col items-center gap-3 sm:absolute sm:right-0 sm:top-2.5 sm:w-[148px]"
             aria-label="Contact"
           >
             <div className="relative h-[166px] w-[148px] shrink-0 translate-y-[8px] overflow-hidden">
@@ -205,7 +205,7 @@ export default function Home() {
           >
             <h2 className="mb-5 text-lg font-medium">Research</h2>
             <div className="space-y-3">
-              <article className="flex min-h-[106px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[95px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/wave-propagation.png"
@@ -216,7 +216,7 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 px-3 py-2">
+                <div className="min-w-0 flex-1 px-3 py-1">
                   <a
                     href="https://link.springer.com/chapter/10.1007/978-3-031-86169-7_2"
                     target="_blank"
@@ -225,7 +225,7 @@ export default function Home() {
                   >
                     Efficient Wave Propagation
                   </a>
-                  <p className="mt-1 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
                     Luis Kaiser,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
@@ -245,10 +245,10 @@ export default function Home() {
                       Christian Klingenberg
                     </a>
                   </p>
-                  <p className="text-xs text-zinc-500">
+                  <p className="text-xs leading-tight text-zinc-500">
                     ENUMATH23, Springer Nature, 2024
                   </p>
-                  <div className="mt-1.5 flex flex-wrap items-center gap-2">
+                  <div className="mt-1 flex flex-wrap items-center gap-2">
                     <Pill
                       href="https://link.springer.com/chapter/10.1007/978-3-031-86169-7_2"
                       compact
@@ -268,7 +268,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-[91px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[82px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/ice-hockey.png"
@@ -278,7 +278,7 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 px-3 py-2">
+                <div className="min-w-0 flex-1 px-3 py-1">
                   <a
                     href="https://github.com/utkaiser/deep_ice_hockey_agent"
                     target="_blank"
@@ -287,7 +287,7 @@ export default function Home() {
                   >
                     Autonomous Multi-Agent RL in Differential Games
                   </a>
-                  <p className="mt-1 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
                     Luis Kaiser,{" "}
                     <a
                       href="https://www.linkedin.com/in/pedro-s-345523345/"
@@ -298,10 +298,10 @@ export default function Home() {
                       Pedro Silva
                     </a>
                   </p>
-                  <p className="text-xs text-zinc-500">
+                  <p className="text-xs leading-tight text-zinc-500">
                     RL Computer Vision Competition, 2022
                   </p>
-                  <div className="mt-1.5 flex items-center gap-2">
+                  <div className="mt-1 flex items-center gap-2">
                     <Pill
                       href="https://github.com/utkaiser/deep_ice_hockey_agent/blob/master/paper_final.pdf"
                       compact
@@ -318,7 +318,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-[91px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[82px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/deep-rl-agents.png"
@@ -328,7 +328,7 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 px-3 py-2">
+                <div className="min-w-0 flex-1 px-3 py-1">
                   <a
                     href="https://github.com/utkaiser/neurotrader_thesis"
                     target="_blank"
@@ -337,7 +337,7 @@ export default function Home() {
                   >
                     Deep RL for Trading
                   </a>
-                  <p className="mt-1 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
                     Luis Kaiser,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=pJB1MsAAAAAJ&amp;hl=de"
@@ -366,10 +366,10 @@ export default function Home() {
                       Andreas Hotho
                     </a>
                   </p>
-                  <p className="text-xs text-zinc-500">
+                  <p className="text-xs leading-tight text-zinc-500">
                     Bachelor thesis, University of Wuerzburg, 2022
                   </p>
-                  <div className="mt-1.5 flex items-center gap-2">
+                  <div className="mt-1 flex items-center gap-2">
                     <Pill
                       href="https://github.com/utkaiser/neurotrader_thesis/blob/main/final.pdf"
                       compact
