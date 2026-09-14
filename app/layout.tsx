@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://luiskaiser.com"),
   title: "Luis Kaiser - Homepage",
   description:
-    "Luis Kaiser is an AI researcher and applied mathematics PhD at UT Austin working on reinforcement learning, continual learning, and AI for science.",
+    "Luis Kaiser is an AI researcher at Google X and an applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.",
   alternates: { canonical: "/" },
   applicationName: "Luis Kaiser",
-  authors: [{ name: "Luis Kaiser", url: "/" }],
+  authors: [{ name: "Luis Kaiser", url: "https://luiskaiser.com/" }],
   creator: "Luis Kaiser",
   publisher: "Luis Kaiser",
   keywords: [
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "reinforcement learning",
     "continual learning",
     "AI for science",
+    "Google X",
     "UT Austin",
   ],
   category: "technology",
@@ -37,11 +38,18 @@ export const metadata: Metadata = {
     type: "profile",
     url: "/",
     siteName: "Luis Kaiser",
-    title: "Luis Kaiser | AI Researcher & Applied Mathematics PhD",
+    title: "Luis Kaiser | AI Researcher at Google X",
     description:
-      "AI researcher and applied mathematics PhD at UT Austin working on reinforcement learning, continual learning, and AI for science.",
+      "AI researcher at Google X and applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.",
     firstName: "Luis",
     lastName: "Kaiser",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luis Kaiser | AI Researcher at Google X",
+    description:
+      "AI researcher at Google X and applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.",
   },
   robots: {
     index: true,
@@ -58,41 +66,73 @@ export const metadata: Metadata = {
 
 const personJsonLd = {
   "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://luiskaiser.com/#person",
-  name: "Luis Kaiser",
-  url: "https://luiskaiser.com/",
-  image: "https://luiskaiser.com/images/luis-kaiser.webp",
-  jobTitle: "AI Researcher",
-  description:
-    "AI researcher and applied mathematics PhD at UT Austin working on reinforcement learning, continual learning, and AI for science.",
-  affiliation: {
-    "@type": "Organization",
-    name: "X, the moonshot factory",
-    url: "https://x.company/",
-  },
-  alumniOf: [
+  "@graph": [
     {
-      "@type": "CollegeOrUniversity",
-      name: "Technical University of Munich",
-      url: "https://www.tum.de/en/",
+      "@type": "WebSite",
+      "@id": "https://luiskaiser.com/#website",
+      url: "https://luiskaiser.com/",
+      name: "Luis Kaiser",
+      inLanguage: "en-US",
+      publisher: { "@id": "https://luiskaiser.com/#person" },
     },
     {
-      "@type": "CollegeOrUniversity",
-      name: "University of Wuerzburg",
-      url: "https://www.uni-wuerzburg.de/en/",
+      "@type": "ProfilePage",
+      "@id": "https://luiskaiser.com/#profile",
+      url: "https://luiskaiser.com/",
+      name: "Luis Kaiser | AI Researcher at Google X",
+      isPartOf: { "@id": "https://luiskaiser.com/#website" },
+      mainEntity: { "@id": "https://luiskaiser.com/#person" },
+      inLanguage: "en-US",
     },
-  ],
-  knowsAbout: [
-    "Reinforcement learning",
-    "Continual learning",
-    "Artificial intelligence for science",
-    "Applied mathematics",
-  ],
-  sameAs: [
-    "https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en",
-    "https://www.linkedin.com/in/luiskaiser/",
-    "https://github.com/utkaiser",
+    {
+      "@type": "Person",
+      "@id": "https://luiskaiser.com/#person",
+      name: "Luis Kaiser",
+      url: "https://luiskaiser.com/",
+      image: {
+        "@type": "ImageObject",
+        url: "https://luiskaiser.com/images/luis-kaiser.webp",
+        width: 1796,
+        height: 2235,
+      },
+      jobTitle: "AI Researcher",
+      description:
+        "AI researcher at Google X and applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.",
+      worksFor: {
+        "@type": "Organization",
+        name: "X, the moonshot factory",
+        alternateName: "Google X",
+        url: "https://x.company/",
+      },
+      alumniOf: [
+        {
+          "@type": "CollegeOrUniversity",
+          name: "The University of Texas at Austin",
+          url: "https://www.utexas.edu/",
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          name: "Technical University of Munich",
+          url: "https://www.tum.de/en/",
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          name: "University of Wuerzburg",
+          url: "https://www.uni-wuerzburg.de/en/",
+        },
+      ],
+      knowsAbout: [
+        "Reinforcement learning",
+        "Continual learning",
+        "Artificial intelligence for science",
+        "Applied mathematics",
+      ],
+      sameAs: [
+        "https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en",
+        "https://www.linkedin.com/in/luiskaiser/",
+        "https://github.com/utkaiser",
+      ],
+    },
   ],
 };
 
