@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#09090b"/>
-  <text x="32" y="41" text-anchor="middle" font-family="Arial, sans-serif" font-size="27" font-weight="600" fill="#fafafa">LK</text>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 32 32"
+  shape-rendering="crispEdges"
+>
+  <rect width="32" height="32" fill="#09090b"/>
+  <path fill="#fafafa" d="M4 4h2v8h5v2H4z"/>
+  <path fill="#fafafa" d="M13 4h2v4h1l3-4h3l-4 5 4 5h-3l-3-4h-1v4h-2z"/>
 </svg>
