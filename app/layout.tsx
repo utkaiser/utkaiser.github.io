@@ -13,14 +13,19 @@ const interTight = Inter_Tight({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://luiskaiser.com";
+const pageTitle = "Luis Kaiser - Homepage";
+const profileTitle = "Luis Kaiser | AI Researcher at Google X";
+const profileDescription =
+  "Luis Kaiser is an AI researcher at Google X and an applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://luiskaiser.com"),
-  title: "Luis Kaiser - Homepage",
-  description:
-    "Luis Kaiser is an AI researcher at Google X and an applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.",
+  metadataBase: new URL(siteUrl),
+  title: pageTitle,
+  description: profileDescription,
   alternates: { canonical: "/" },
   applicationName: "Luis Kaiser",
-  authors: [{ name: "Luis Kaiser", url: "https://luiskaiser.com/" }],
+  authors: [{ name: "Luis Kaiser", url: `${siteUrl}/` }],
   creator: "Luis Kaiser",
   publisher: "Luis Kaiser",
   keywords: [
@@ -38,18 +43,16 @@ export const metadata: Metadata = {
     type: "profile",
     url: "/",
     siteName: "Luis Kaiser",
-    title: "Luis Kaiser | AI Researcher at Google X",
-    description:
-      "AI researcher at Google X and applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.",
+    title: profileTitle,
+    description: profileDescription,
     firstName: "Luis",
     lastName: "Kaiser",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luis Kaiser | AI Researcher at Google X",
-    description:
-      "AI researcher at Google X and applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.",
+    title: profileTitle,
+    description: profileDescription,
   },
   robots: {
     index: true,
@@ -64,40 +67,39 @@ export const metadata: Metadata = {
   },
 };
 
-const personJsonLd = {
+const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://luiskaiser.com/#website",
-      url: "https://luiskaiser.com/",
+      "@id": `${siteUrl}/#website`,
+      url: `${siteUrl}/`,
       name: "Luis Kaiser",
       inLanguage: "en-US",
-      publisher: { "@id": "https://luiskaiser.com/#person" },
+      publisher: { "@id": `${siteUrl}/#person` },
     },
     {
       "@type": "ProfilePage",
-      "@id": "https://luiskaiser.com/#profile",
-      url: "https://luiskaiser.com/",
-      name: "Luis Kaiser | AI Researcher at Google X",
-      isPartOf: { "@id": "https://luiskaiser.com/#website" },
-      mainEntity: { "@id": "https://luiskaiser.com/#person" },
+      "@id": `${siteUrl}/#profile`,
+      url: `${siteUrl}/`,
+      name: profileTitle,
+      isPartOf: { "@id": `${siteUrl}/#website` },
+      mainEntity: { "@id": `${siteUrl}/#person` },
       inLanguage: "en-US",
     },
     {
       "@type": "Person",
-      "@id": "https://luiskaiser.com/#person",
+      "@id": `${siteUrl}/#person`,
       name: "Luis Kaiser",
-      url: "https://luiskaiser.com/",
+      url: `${siteUrl}/`,
       image: {
         "@type": "ImageObject",
-        url: "https://luiskaiser.com/images/luis-kaiser.webp",
+        url: `${siteUrl}/images/luis-kaiser.webp`,
         width: 1796,
         height: 2235,
       },
       jobTitle: "AI Researcher",
-      description:
-        "AI researcher at Google X and applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.",
+      description: profileDescription,
       worksFor: {
         "@type": "Organization",
         name: "X, the moonshot factory",
@@ -156,7 +158,7 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+            __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
           }}
         />
         <Providers>{children}</Providers>
