@@ -63,9 +63,9 @@ export default function Home() {
       <div className="relative mx-auto flex w-full max-w-screen-sm flex-1 flex-col px-4 pt-20 max-sm:pt-12">
         <header className="relative mb-8 flex min-h-20 items-start justify-between gap-6 sm:min-h-12">
           <div className="pt-1">
-            <Link className="font-medium text-black dark:text-white" href="/">
-              Luis Kaiser
-            </Link>
+            <h1 className="font-medium text-black dark:text-white">
+              <Link href="/">Luis Kaiser</Link>
+            </h1>
             <AnimatedRole>AI Researcher</AnimatedRole>
           </div>
           <aside
@@ -205,7 +205,7 @@ export default function Home() {
           >
             <h2 className="mb-5 text-lg font-medium">Research</h2>
             <div className="space-y-3">
-              <article className="flex min-h-28 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[106px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/wave-propagation.png"
@@ -216,7 +216,7 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 p-3">
+                <div className="min-w-0 flex-1 px-3 py-2">
                   <a
                     href="https://link.springer.com/chapter/10.1007/978-3-031-86169-7_2"
                     target="_blank"
@@ -225,7 +225,7 @@ export default function Home() {
                   >
                     Efficient Wave Propagation
                   </a>
-                  <p className="mt-1.5 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-1 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
                     Luis Kaiser,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
@@ -248,7 +248,7 @@ export default function Home() {
                   <p className="text-xs text-zinc-500">
                     ENUMATH23, Springer Nature, 2024
                   </p>
-                  <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <div className="mt-1.5 flex flex-wrap items-center gap-2">
                     <Pill
                       href="https://link.springer.com/chapter/10.1007/978-3-031-86169-7_2"
                       compact
@@ -268,7 +268,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-24 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[91px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/ice-hockey.png"
@@ -278,7 +278,7 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 p-3">
+                <div className="min-w-0 flex-1 px-3 py-2">
                   <a
                     href="https://github.com/utkaiser/deep_ice_hockey_agent"
                     target="_blank"
@@ -287,7 +287,7 @@ export default function Home() {
                   >
                     Autonomous Multi-Agent RL in Differential Games
                   </a>
-                  <p className="mt-1.5 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-1 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
                     Luis Kaiser,{" "}
                     <a
                       href="https://www.linkedin.com/in/pedro-s-345523345/"
@@ -301,7 +301,7 @@ export default function Home() {
                   <p className="text-xs text-zinc-500">
                     RL Computer Vision Competition, 2022
                   </p>
-                  <div className="mt-2 flex items-center gap-2">
+                  <div className="mt-1.5 flex items-center gap-2">
                     <Pill
                       href="https://github.com/utkaiser/deep_ice_hockey_agent/blob/master/paper_final.pdf"
                       compact
@@ -318,7 +318,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-24 overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[91px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/deep-rl-agents.png"
@@ -328,7 +328,7 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 p-3">
+                <div className="min-w-0 flex-1 px-3 py-2">
                   <a
                     href="https://github.com/utkaiser/neurotrader_thesis"
                     target="_blank"
@@ -337,7 +337,7 @@ export default function Home() {
                   >
                     Deep RL for Trading
                   </a>
-                  <p className="mt-1.5 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-1 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
                     Luis Kaiser,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=pJB1MsAAAAAJ&amp;hl=de"
@@ -369,7 +369,7 @@ export default function Home() {
                   <p className="text-xs text-zinc-500">
                     Bachelor thesis, University of Wuerzburg, 2022
                   </p>
-                  <div className="mt-2 flex items-center gap-2">
+                  <div className="mt-1.5 flex items-center gap-2">
                     <Pill
                       href="https://github.com/utkaiser/neurotrader_thesis/blob/main/final.pdf"
                       compact

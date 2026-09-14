@@ -17,9 +17,83 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://luiskaiser.com"),
   title: "Luis Kaiser - Homepage",
   description:
-    "Luis Kaiser works on reinforcement learning, continual learning, and AI for science.",
+    "Luis Kaiser is an AI researcher and applied mathematics PhD at UT Austin working on reinforcement learning, continual learning, and AI for science.",
   alternates: { canonical: "/" },
-  authors: [{ name: "Luis Kaiser" }],
+  applicationName: "Luis Kaiser",
+  authors: [{ name: "Luis Kaiser", url: "/" }],
+  creator: "Luis Kaiser",
+  publisher: "Luis Kaiser",
+  keywords: [
+    "Luis Kaiser",
+    "AI researcher",
+    "applied mathematics",
+    "reinforcement learning",
+    "continual learning",
+    "AI for science",
+    "UT Austin",
+  ],
+  category: "technology",
+  openGraph: {
+    type: "profile",
+    url: "/",
+    siteName: "Luis Kaiser",
+    title: "Luis Kaiser | AI Researcher & Applied Mathematics PhD",
+    description:
+      "AI researcher and applied mathematics PhD at UT Austin working on reinforcement learning, continual learning, and AI for science.",
+    firstName: "Luis",
+    lastName: "Kaiser",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+};
+
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://luiskaiser.com/#person",
+  name: "Luis Kaiser",
+  url: "https://luiskaiser.com/",
+  image: "https://luiskaiser.com/images/luis-kaiser.webp",
+  jobTitle: "AI Researcher",
+  description:
+    "AI researcher and applied mathematics PhD at UT Austin working on reinforcement learning, continual learning, and AI for science.",
+  affiliation: {
+    "@type": "Organization",
+    name: "X, the moonshot factory",
+    url: "https://x.company/",
+  },
+  alumniOf: [
+    {
+      "@type": "CollegeOrUniversity",
+      name: "Technical University of Munich",
+      url: "https://www.tum.de/en/",
+    },
+    {
+      "@type": "CollegeOrUniversity",
+      name: "University of Wuerzburg",
+      url: "https://www.uni-wuerzburg.de/en/",
+    },
+  ],
+  knowsAbout: [
+    "Reinforcement learning",
+    "Continual learning",
+    "Artificial intelligence for science",
+    "Applied mathematics",
+  ],
+  sameAs: [
+    "https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en",
+    "https://www.linkedin.com/in/luiskaiser/",
+    "https://github.com/utkaiser",
+  ],
 };
 
 export const viewport: Viewport = {
@@ -39,6 +113,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${interTight.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(personJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <Providers>{children}</Providers>
       </body>
     </html>
