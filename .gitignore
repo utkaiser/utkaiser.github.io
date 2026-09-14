@@ -4,3 +4,8 @@ _site
 .DS_Store
 znotes
 vendor
+node_modules
+.next
+.vercel
+*.tsbuildinfo
+npm-debug.log*

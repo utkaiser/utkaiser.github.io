@@ -1,4 +1,4 @@
-name: Build Jekyll Site
+name: Build Next.js Site
 
 on:
   push:
@@ -13,11 +13,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Ruby and install gems
-        uses: ruby/setup-ruby@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          ruby-version: '3.3'
-          bundler-cache: true
-          bundler-args: "--path vendor/bundle" 
-      - name: Build Jekyll
-        run: bundle exec jekyll build
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build

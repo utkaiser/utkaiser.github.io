@@ -1,23 +1,27 @@
-# Website
+# Luis Kaiser
 
-## Write
+Single-page personal website built with Next.js, TypeScript, Tailwind CSS, Motion, and `next-themes`. Vercel is the deployment target.
 
-```
-bundle exec jekyll post "My New Post"
-```
+## Local development
 
-## Run
-
-```
-bundle exec jekyll serve --livereload
+```bash
+npm install
+npm run dev
 ```
 
-## Run with Docker
+Open [http://localhost:3000](http://localhost:3000).
 
+## Verification
+
+```bash
+npm run lint
+npm run build
 ```
-docker run \
-  --volume="$PWD:/srv/jekyll" \
-  -p 4000:4000 -p 35729:35729 \
-  -it jekyll/jekyll \
-  jekyll serve --livereload
+
+## Deploy
+
+Vercel deploys the `main` branch. For a manual preview deployment:
+
+```bash
+npx vercel
 ```
