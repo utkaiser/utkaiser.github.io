@@ -69,22 +69,24 @@ export default function Home() {
             <AnimatedRole>AI Researcher</AnimatedRole>
           </div>
           <aside
-            className="flex w-48 shrink-0 flex-col items-center gap-3 sm:absolute sm:right-0 sm:top-2.5 sm:w-[141px]"
+            className="flex w-48 shrink-0 flex-col items-center gap-3 sm:absolute sm:right-0 sm:top-2.5 sm:w-[148px]"
             aria-label="Contact"
           >
-            <Image
-              src="/images/luis-kaiser.webp"
-              alt="Luis Kaiser"
-              width={1796}
-              height={2235}
-              quality={100}
-              priority
-              className="h-auto w-[141px] shrink-0"
-            />
+            <div className="relative h-[166px] w-[148px] shrink-0 translate-y-[8px] overflow-hidden">
+              <Image
+                src="/images/luis-kaiser.webp"
+                alt="Luis Kaiser"
+                fill
+                sizes="148px"
+                quality={100}
+                priority
+                className="object-cover object-center"
+              />
+            </div>
             <p className="whitespace-nowrap text-center text-sm text-zinc-600 dark:text-zinc-400">
               lkaiser at utexas dot edu
             </p>
-            <div className="flex flex-nowrap items-center justify-center gap-2">
+            <div className="-mt-1 flex flex-nowrap items-center justify-center gap-2">
               <Pill
                 href="https://scholar.google.com/citations?user=AB4exREAAAAJ&amp;hl=en"
                 compact
@@ -103,7 +105,7 @@ export default function Home() {
 
         <main className="space-y-12">
           <motion.section {...sectionMotion}>
-            <div className="space-y-3 text-zinc-600 dark:text-zinc-400 sm:max-w-[400px]">
+            <div className="space-y-3 text-zinc-600 dark:text-zinc-400 sm:max-w-[420px]">
               <p className="sm:whitespace-nowrap">
                 PhD in Mathematics at{" "}
                 <a
