@@ -105,7 +105,16 @@ export default function Home() {
           <motion.section {...sectionMotion}>
             <div className="space-y-3 text-zinc-600 dark:text-zinc-400 sm:max-w-[400px]">
               <p className="sm:whitespace-nowrap">
-                PhD in Mathematics at UT Austin, advised by{" "}
+                PhD in Mathematics at{" "}
+                <a
+                  href="https://www.utexas.edu/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={externalLink}
+                >
+                  UT Austin
+                </a>
+                , advised by{" "}
                 <a
                   href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
                   target="_blank"
