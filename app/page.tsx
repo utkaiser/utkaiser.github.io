@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import googleXImage from "../images/projects/google_x.jpg";
 
 const externalLink =
   "underline decoration-zinc-400 underline-offset-2 transition-colors duration-200 hover:text-zinc-900 dark:decoration-zinc-500 dark:hover:text-zinc-100";
@@ -209,7 +208,7 @@ export default function Home() {
               <article className="flex min-h-[82px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0 bg-black">
                   <Image
-                    src={googleXImage}
+                    src="/images/google-x.jpg"
                     alt="X, the Moonshot Factory"
                     fill
                     sizes="112px"
