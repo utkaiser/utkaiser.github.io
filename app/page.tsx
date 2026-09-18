@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
+import googleXImage from "../images/projects/google_x.jpg";
 
 const externalLink =
   "underline decoration-zinc-400 underline-offset-2 transition-colors duration-200 hover:text-zinc-900 dark:decoration-zinc-500 dark:hover:text-zinc-100";
@@ -60,7 +61,7 @@ const sectionMotion = {
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
-      <div className="relative mx-auto flex w-full max-w-screen-sm flex-1 flex-col px-4 pt-20 max-sm:pt-12">
+      <div className="relative mx-auto flex w-full max-w-[44rem] flex-1 flex-col px-4 pt-20 max-sm:pt-12">
         <header className="relative mb-8 flex min-h-20 items-start justify-between gap-6 sm:min-h-12">
           <div className="pt-1">
             <h1 className="font-medium text-black dark:text-white">
@@ -105,7 +106,7 @@ export default function Home() {
 
         <main className="space-y-12">
           <motion.section {...sectionMotion}>
-            <div className="space-y-3 text-zinc-600 dark:text-zinc-400 sm:max-w-[420px]">
+            <div className="space-y-3 text-zinc-600 dark:text-zinc-400 sm:max-w-[456px]">
               <p className="sm:whitespace-nowrap">
                 PhD in Mathematics at{" "}
                 <a
@@ -205,6 +206,32 @@ export default function Home() {
           >
             <h2 className="mb-5 text-lg font-medium">Research</h2>
             <div className="space-y-3">
+              <article className="flex min-h-[82px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+                <div className="relative w-28 shrink-0 bg-black">
+                  <Image
+                    src={googleXImage}
+                    alt="X, the Moonshot Factory"
+                    fill
+                    sizes="112px"
+                    loading="eager"
+                    className="object-contain"
+                  />
+                </div>
+                <div className="min-w-0 flex-1 px-3 py-2">
+                  <a
+                    href="https://x.company/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
+                  >
+                    Google X - PhD Residency
+                  </a>
+                  <p className="mt-1 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
+                    Focus areas included self-improving AI and PDEs.
+                  </p>
+                </div>
+              </article>
+
               <article className="flex min-h-[95px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
