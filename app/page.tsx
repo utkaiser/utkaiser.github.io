@@ -69,15 +69,15 @@ export default function Home() {
             <AnimatedRole>AI Researcher</AnimatedRole>
           </div>
           <aside
-            className="relative z-10 flex w-48 shrink-0 flex-col items-center gap-3 sm:absolute sm:right-0 sm:top-2.5 sm:w-[148px]"
+            className="relative z-10 flex w-48 shrink-0 flex-col items-center gap-3 sm:absolute sm:right-0 sm:top-2.5 sm:w-[158px]"
             aria-label="Contact"
           >
-            <div className="relative h-[166px] w-[148px] shrink-0 translate-y-[8px] overflow-hidden">
+            <div className="relative h-[178px] w-[158px] shrink-0 translate-y-[8px] overflow-hidden">
               <Image
                 src="/images/luis-kaiser.webp"
                 alt="Luis Kaiser"
                 fill
-                sizes="148px"
+                sizes="158px"
                 quality={100}
                 priority
                 className="object-cover object-center"
