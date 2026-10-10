@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "motion/react";
 
 const externalLink =
-  "underline decoration-zinc-400 underline-offset-2 transition-colors duration-200 hover:text-zinc-900 dark:decoration-zinc-500 dark:hover:text-zinc-100";
+  "transition-colors duration-200";
 
 function Pill({
   href,
@@ -22,7 +22,7 @@ function Pill({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={`group relative inline-flex shrink-0 items-center gap-px whitespace-nowrap rounded-full bg-zinc-100 text-black transition-colors duration-200 hover:bg-zinc-950 hover:text-zinc-50 dark:bg-zinc-800 dark:text-zinc-100 dark:hover:bg-zinc-700 ${compact ? "px-2 py-0.5 text-xs" : "px-2.5 py-1 text-sm"}`}
+        className={`group relative inline-flex shrink-0 items-center gap-px whitespace-nowrap rounded-full bg-zinc-100 transition-colors duration-200 hover:bg-zinc-200 ${compact ? "px-2 py-0.5 text-xs" : "px-2.5 py-1 text-sm"}`}
       >
         {children}
       </a>
@@ -127,7 +127,7 @@ export default function Home() {
                 </a>
                 .
                 <span className="block">
-                  Focus on RL and continual learning.
+                  Focus on reinforcement learning and continual learning.
                 </span>
               </p>
               <p>

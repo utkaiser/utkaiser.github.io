@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
-    <ThemeProvider attribute="class" forcedTheme="dark" enableSystem={false}>
+    <ThemeProvider attribute="class" forcedTheme="light" enableSystem={false}>
       {children}
     </ThemeProvider>
   );
