@@ -69,15 +69,15 @@ export default function Home() {
             <AnimatedRole>AI Researcher</AnimatedRole>
           </div>
           <aside
-            className="relative z-10 flex w-48 shrink-0 flex-col items-center gap-3 sm:absolute sm:right-0 sm:top-2.5 sm:w-[158px]"
+            className="relative z-10 flex w-[9.404762rem] shrink-0 flex-col items-center gap-3 md:absolute md:right-0 md:top-2.5"
             aria-label="Contact"
           >
-            <div className="relative h-[178px] w-[158px] shrink-0 translate-y-[8px] overflow-hidden">
+            <div className="relative aspect-[79/89] w-full shrink-0 translate-y-[0.4444rem] overflow-hidden">
               <Image
                 src="/images/luis-kaiser.webp"
                 alt="Luis Kaiser"
                 fill
-                sizes="158px"
+                sizes="(min-width: 1512px) 10.45vw, 158px"
                 quality={100}
                 priority
                 className="object-cover object-center"
@@ -105,8 +105,8 @@ export default function Home() {
 
         <main className="space-y-12">
           <motion.section {...sectionMotion}>
-            <div className="space-y-3 text-zinc-600 dark:text-zinc-400 sm:max-w-[456px]">
-              <p className="sm:whitespace-nowrap">
+            <div className="space-y-3 text-zinc-600 dark:text-zinc-400 md:max-w-[30rem]">
+              <p>
                 PhD in Mathematics at{" "}
                 <a
                   href="https://www.utexas.edu/"
@@ -131,7 +131,7 @@ export default function Home() {
                 </span>
               </p>
               <p>
-                <span className="block sm:whitespace-nowrap">
+                <span className="block">
                   Currently automate research at{" "}
                   <a
                     href="https://x.company/"
@@ -205,7 +205,7 @@ export default function Home() {
           >
             <h2 className="mb-5 text-lg font-medium">Research</h2>
             <div className="space-y-3">
-              <article className="flex min-h-[82px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[4.5556rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0 bg-black">
                   <Image
                     src="/images/google-x.jpg"
@@ -231,7 +231,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-[95px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[5.2778rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/wave-propagation.png"
@@ -252,7 +252,7 @@ export default function Home() {
                     Efficient Wave Propagation
                   </a>
                   <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
-                    Luis Kaiser,{" "}
+                    <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
                       target="_blank"
@@ -271,7 +271,7 @@ export default function Home() {
                       Christian Klingenberg
                     </a>
                   </p>
-                  <p className="text-xs leading-tight text-zinc-500">
+                  <p className="text-xs leading-snug text-zinc-500">
                     ENUMATH23, Springer Nature, 2024
                   </p>
                   <div className="mt-1 flex flex-wrap items-center gap-2">
@@ -294,7 +294,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-[82px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[4.5556rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/ice-hockey.png"
@@ -314,7 +314,7 @@ export default function Home() {
                     Autonomous Multi-Agent RL in Differential Games
                   </a>
                   <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
-                    Luis Kaiser,{" "}
+                    <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://www.linkedin.com/in/pedro-s-345523345/"
                       target="_blank"
@@ -324,7 +324,7 @@ export default function Home() {
                       Pedro Silva
                     </a>
                   </p>
-                  <p className="text-xs leading-tight text-zinc-500">
+                  <p className="text-xs leading-snug text-zinc-500">
                     RL Computer Vision Competition, 2022
                   </p>
                   <div className="mt-1 flex items-center gap-2">
@@ -344,7 +344,7 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-[82px] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+              <article className="flex min-h-[4.5556rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
                 <div className="relative w-28 shrink-0">
                   <Image
                     src="/images/deep-rl-agents.png"
@@ -364,7 +364,7 @@ export default function Home() {
                     Deep RL for Trading
                   </a>
                   <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
-                    Luis Kaiser,{" "}
+                    <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=pJB1MsAAAAAJ&amp;hl=de"
                       target="_blank"
@@ -392,7 +392,7 @@ export default function Home() {
                       Andreas Hotho
                     </a>
                   </p>
-                  <p className="text-xs leading-tight text-zinc-500">
+                  <p className="text-xs leading-snug text-zinc-500">
                     Bachelor thesis, University of Wuerzburg, 2022
                   </p>
                   <div className="mt-1 flex items-center gap-2">

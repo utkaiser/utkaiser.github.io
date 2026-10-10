@@ -14,14 +14,13 @@ const interTight = Inter_Tight({
 });
 
 const siteUrl = "https://luiskaiser.com";
-const pageTitle = "Luis Kaiser - Homepage";
 const profileTitle = "Luis Kaiser | AI Researcher at Google X";
 const profileDescription =
   "Luis Kaiser is an AI researcher at Google X and an applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: pageTitle,
+  title: profileTitle,
   description: profileDescription,
   alternates: { canonical: "/" },
   applicationName: "Luis Kaiser",
@@ -141,10 +140,7 @@ const structuredData = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
-  ],
+  themeColor: "#09090b",
 };
 
 export default function RootLayout({
@@ -153,7 +149,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${interTight.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
+        className={`${inter.variable} ${interTight.variable} tracking-tight antialiased`}
       >
         <script
           type="application/ld+json"
