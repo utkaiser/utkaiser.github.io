@@ -225,7 +225,7 @@ export default function Home() {
                   >
                     Google X - PhD Residency
                   </a>
-                  <p className="mt-1 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-1 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
                     Focus areas included self-improving AI and PDEs.
                   </p>
                 </div>
@@ -251,7 +251,7 @@ export default function Home() {
                   >
                     Efficient Wave Propagation
                   </a>
-                  <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
@@ -271,7 +271,7 @@ export default function Home() {
                       Christian Klingenberg
                     </a>
                   </p>
-                  <p className="text-xs leading-snug text-zinc-500">
+                  <p className="text-sm leading-snug text-zinc-500">
                     ENUMATH23, Springer Nature, 2024
                   </p>
                   <div className="mt-1 flex flex-wrap items-center gap-2">
@@ -313,7 +313,7 @@ export default function Home() {
                   >
                     Autonomous Multi-Agent RL in Differential Games
                   </a>
-                  <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://www.linkedin.com/in/pedro-s-345523345/"
@@ -324,7 +324,7 @@ export default function Home() {
                       Pedro Silva
                     </a>
                   </p>
-                  <p className="text-xs leading-snug text-zinc-500">
+                  <p className="text-sm leading-snug text-zinc-500">
                     RL Computer Vision Competition, 2022
                   </p>
                   <div className="mt-1 flex items-center gap-2">
@@ -363,7 +363,7 @@ export default function Home() {
                   >
                     Deep RL for Trading
                   </a>
-                  <p className="mt-0.5 text-xs leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=pJB1MsAAAAAJ&amp;hl=de"
@@ -392,7 +392,7 @@ export default function Home() {
                       Andreas Hotho
                     </a>
                   </p>
-                  <p className="text-xs leading-snug text-zinc-500">
+                  <p className="text-sm leading-snug text-zinc-500">
                     Bachelor thesis, University of Wuerzburg, 2022
                   </p>
                   <div className="mt-1 flex items-center gap-2">
