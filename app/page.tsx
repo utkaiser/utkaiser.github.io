@@ -218,7 +218,7 @@ export default function Home() {
                     src="/images/google-x.jpg"
                     alt="X, the Moonshot Factory"
                     fill
-                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 87px"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 33vw"
                     loading="eager"
                     className="object-contain"
                   />
@@ -244,7 +244,7 @@ export default function Home() {
                     src="/images/wave-propagation.png"
                     alt="Three-dimensional wave propagation simulation"
                     fill
-                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 87px"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 33vw"
                     loading="eager"
                     className="object-cover"
                   />
@@ -307,7 +307,7 @@ export default function Home() {
                     src="/images/ice-hockey.png"
                     alt="Autonomous ice hockey agent in SuperTuxKart"
                     fill
-                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 87px"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 33vw"
                     className="object-cover"
                   />
                 </div>
@@ -357,7 +357,7 @@ export default function Home() {
                     src="/images/deep-rl-agents.png"
                     alt="Deep reinforcement learning agents evaluated on financial market data"
                     fill
-                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 87px"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 33vw"
                     className="object-cover"
                   />
                 </div>
