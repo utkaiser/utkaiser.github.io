@@ -11,7 +11,7 @@
 }
 
 html {
-  font-size: 105%;
+  font-size: 108.15%;
   scroll-behavior: smooth;
 }
 
@@ -33,7 +33,7 @@ a:hover {
 
 @media (min-width: 94.5rem) {
   html {
-    font-size: max(105%, 1.1111111111vw);
+    font-size: max(108.15%, 1.1444444444vw);
   }
 }
 

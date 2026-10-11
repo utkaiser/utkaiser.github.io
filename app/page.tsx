@@ -11,15 +11,18 @@ function Pill({
   href,
   children,
   compact = false,
+  ariaLabel,
 }: {
   href: string;
   children: React.ReactNode;
   compact?: boolean;
+  ariaLabel?: string;
 }) {
   return (
     <motion.div whileHover={{ y: -1 }} whileTap={{ scale: 0.97 }}>
       <a
         href={href}
+        aria-label={ariaLabel}
         target="_blank"
         rel="noopener noreferrer"
         className={`group relative inline-flex shrink-0 items-center gap-px whitespace-nowrap rounded-full bg-zinc-100 transition-colors duration-200 hover:bg-zinc-200 ${compact ? "px-2 py-0.5 text-xs" : "px-2.5 py-1 text-sm"}`}
@@ -61,16 +64,112 @@ export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
       <div className="relative mx-auto flex w-full max-w-[44rem] flex-1 flex-col px-4 pt-20 max-sm:pt-12">
-        <header className="relative mb-8 flex min-h-20 items-start justify-between gap-6 sm:min-h-12">
+        <header className="relative mb-12 grid grid-cols-1 items-start gap-6 sm:grid-cols-[minmax(0,1fr)_9.404762rem] sm:gap-8">
           <div className="pt-1">
             <h1 className="font-medium text-black dark:text-white">
               <Link href="/">Luis Kaiser</Link>
             </h1>
             <AnimatedRole>AI Researcher</AnimatedRole>
+            <div className="mt-8">
+              <motion.section {...sectionMotion}>
+                <div className="space-y-3 text-zinc-600 dark:text-zinc-400 max-w-[30rem]">
+                  <p>
+                    PhD in Mathematics at{" "}
+                    <a
+                      href="https://www.utexas.edu/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={externalLink}
+                    >
+                      UT Austin
+                    </a>
+                    , advised by{" "}
+                    <a
+                      href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={externalLink}
+                    >
+                      Richard Tsai
+                    </a>
+                    .
+                    <span className="block">
+                      Focus on reinforcement learning and continual learning.
+                    </span>
+                  </p>
+                  <p>
+                    <span className="block">
+                      Currently automate research at{" "}
+                      <a
+                        href="https://x.company/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={externalLink}
+                      >
+                        Google X
+                      </a>{" "}
+                      for an AI moonshot.
+                    </span>
+                    <span className="block">
+                      Previously{" "}
+                      <a
+                        href="https://www.bloomberg.com/company/what-we-do/engineering-cto/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={externalLink}
+                      >
+                        Bloomberg
+                      </a>
+                      .
+                    </span>
+                  </p>
+                  <p>
+                    Studied Mathematics at{" "}
+                    <a
+                      href="https://www.tum.de/en/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={externalLink}
+                    >
+                      TUM
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="https://www.uni-wuerzburg.de/en/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={externalLink}
+                    >
+                      Wuerzburg
+                    </a>
+                    , advised by{" "}
+                    <a
+                      href="https://scholar.google.com/citations?user=S6MCm88AAAAJ&amp;hl=en"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={externalLink}
+                    >
+                      Prof. Klingenberg
+                    </a>{" "}
+                    and{" "}
+                    <a
+                      href="https://scholar.google.com/citations?user=eWTzXFAAAAAJ"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={externalLink}
+                    >
+                      Prof. Hotho
+                    </a>
+                    .
+                  </p>
+                </div>
+              </motion.section>
+
+            </div>
           </div>
           <aside
-            className="relative z-10 flex w-[9.404762rem] shrink-0 flex-col items-center gap-3 md:absolute md:right-0 md:top-2.5"
-            aria-label="Contact"
+            className="relative z-10 flex w-[9.404762rem] shrink-0 flex-col items-center gap-3 sm:mt-2.5"
+            aria-label="Profile"
           >
             <div className="relative aspect-[79/89] w-full shrink-0 translate-y-[0.4444rem] overflow-hidden">
               <Image
@@ -86,17 +185,14 @@ export default function Home() {
             <p className="whitespace-nowrap text-center text-sm text-zinc-600 dark:text-zinc-400">
               lkaiser at utexas dot edu
             </p>
-            <div className="-mt-1 flex flex-nowrap items-center justify-center gap-2">
-              <Pill
-                href="https://scholar.google.com/citations?user=AB4exREAAAAJ&amp;hl=en"
-                compact
-              >
-                Google Scholar
+            <div className="-mt-1 flex items-center gap-1">
+              <Pill href="https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en" compact>
+                Scholar
               </Pill>
-              <Pill
-                href="https://www.linkedin.com/in/luiskaiser/"
-                compact
-              >
+              <Pill href="/cv.pdf" ariaLabel="CV (PDF)" compact>
+                CV
+              </Pill>
+              <Pill href="https://www.linkedin.com/in/luiskaiser/" compact>
                 LinkedIn
               </Pill>
             </div>
@@ -104,100 +200,6 @@ export default function Home() {
         </header>
 
         <main className="space-y-12">
-          <motion.section {...sectionMotion}>
-            <div className="space-y-3 text-zinc-600 dark:text-zinc-400 md:max-w-[30rem]">
-              <p>
-                PhD in Mathematics at{" "}
-                <a
-                  href="https://www.utexas.edu/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={externalLink}
-                >
-                  UT Austin
-                </a>
-                , advised by{" "}
-                <a
-                  href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={externalLink}
-                >
-                  Richard Tsai
-                </a>
-                .
-                <span className="block">
-                  Focus on reinforcement learning and continual learning.
-                </span>
-              </p>
-              <p>
-                <span className="block">
-                  Currently automate research at{" "}
-                  <a
-                    href="https://x.company/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={externalLink}
-                  >
-                    Google X
-                  </a>{" "}
-                  for an AI moonshot.
-                </span>
-                <span className="block">
-                  Previously{" "}
-                  <a
-                    href="https://www.bloomberg.com/company/what-we-do/engineering-cto/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={externalLink}
-                  >
-                    Bloomberg
-                  </a>
-                  .
-                </span>
-              </p>
-              <p>
-                Studied Mathematics at{" "}
-                <a
-                  href="https://www.tum.de/en/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={externalLink}
-                >
-                  TUM
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://www.uni-wuerzburg.de/en/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={externalLink}
-                >
-                  Wuerzburg
-                </a>
-                , advised by{" "}
-                <a
-                  href="https://scholar.google.com/citations?user=S6MCm88AAAAJ&amp;hl=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={externalLink}
-                >
-                  Prof. Klingenberg
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://scholar.google.com/citations?user=eWTzXFAAAAAJ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={externalLink}
-                >
-                  Prof. Hotho
-                </a>
-                .
-              </p>
-            </div>
-          </motion.section>
-
           <motion.section
             {...sectionMotion}
             transition={{ ...sectionMotion.transition, delay: 0.06 }}
@@ -225,7 +227,7 @@ export default function Home() {
                   >
                     Google X - PhD Residency
                   </a>
-                  <p className="mt-1 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-1 text-[0.81rem] leading-snug text-zinc-600 dark:text-zinc-400">
                     Focus areas included self-improving AI and PDEs.
                   </p>
                 </div>
@@ -251,7 +253,7 @@ export default function Home() {
                   >
                     Efficient Wave Propagation
                   </a>
-                  <p className="mt-0.5 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-[0.81rem] leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
@@ -271,7 +273,7 @@ export default function Home() {
                       Christian Klingenberg
                     </a>
                   </p>
-                  <p className="text-sm leading-snug text-zinc-500">
+                  <p className="text-[0.81rem] leading-snug text-zinc-500">
                     ENUMATH23, Springer Nature, 2024
                   </p>
                   <div className="mt-1 flex flex-wrap items-center gap-2">
@@ -313,7 +315,7 @@ export default function Home() {
                   >
                     Autonomous Multi-Agent RL in Differential Games
                   </a>
-                  <p className="mt-0.5 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-[0.81rem] leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://www.linkedin.com/in/pedro-s-345523345/"
@@ -324,7 +326,7 @@ export default function Home() {
                       Pedro Silva
                     </a>
                   </p>
-                  <p className="text-sm leading-snug text-zinc-500">
+                  <p className="text-[0.81rem] leading-snug text-zinc-500">
                     RL Computer Vision Competition, 2022
                   </p>
                   <div className="mt-1 flex items-center gap-2">
@@ -363,7 +365,7 @@ export default function Home() {
                   >
                     Deep RL for Trading
                   </a>
-                  <p className="mt-0.5 text-sm leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-[0.81rem] leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=pJB1MsAAAAAJ&amp;hl=de"
@@ -392,7 +394,7 @@ export default function Home() {
                       Andreas Hotho
                     </a>
                   </p>
-                  <p className="text-sm leading-snug text-zinc-500">
+                  <p className="text-[0.81rem] leading-snug text-zinc-500">
                     Bachelor thesis, University of Wuerzburg, 2022
                   </p>
                   <div className="mt-1 flex items-center gap-2">
