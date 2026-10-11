@@ -19,23 +19,23 @@ function Pill({
   ariaLabel?: string;
 }) {
   return (
-    <motion.div whileHover={{ y: -1 }} whileTap={{ scale: 0.97 }}>
-      <a
-        href={href}
-        aria-label={ariaLabel}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`group relative inline-flex shrink-0 items-center gap-px whitespace-nowrap rounded-full bg-zinc-100 transition-colors duration-200 hover:bg-zinc-200 ${compact ? "px-2 py-0.5 text-xs" : "px-2.5 py-1 text-sm"}`}
-      >
-        {children}
-      </a>
-    </motion.div>
+    <motion.a
+      whileHover={{ y: -1 }}
+      whileTap={{ scale: 0.97 }}
+      href={href}
+      aria-label={ariaLabel}
+      target={href.startsWith("mailto:") ? undefined : "_blank"}
+      rel="noopener noreferrer"
+      className={`profile-pill group relative inline-flex shrink-0 items-center gap-px whitespace-nowrap rounded-full bg-zinc-100 transition-colors duration-200 hover:bg-zinc-200 ${compact ? "px-2 py-0.5 text-xs" : "px-2.5 py-1 text-sm"}`}
+    >
+      {children}
+    </motion.a>
   );
 }
 
 function AnimatedRole({ children }: { children: string }) {
   return (
-    <p className="text-zinc-600 dark:text-zinc-500">
+    <p className="text-zinc-600 dark:text-zinc-500 max-sm:text-sm">
       <span className="sr-only">{children}</span>
       <span className="inline-block whitespace-pre" aria-hidden="true">
         {Array.from(children).map((character, index) => (
@@ -63,18 +63,20 @@ const sectionMotion = {
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
-      <div className="relative mx-auto flex w-full max-w-[44rem] flex-1 flex-col px-4 pt-20 max-sm:pt-12">
-        <header className="relative mb-12 grid grid-cols-1 items-start gap-6 sm:grid-cols-[minmax(0,1fr)_9.404762rem] sm:gap-8">
-          <div className="pt-1">
-            <h1 className="font-medium text-black dark:text-white">
-              <Link href="/">Luis Kaiser</Link>
-            </h1>
-            <AnimatedRole>AI Researcher</AnimatedRole>
-            <div className="mt-8">
+      <div className="mx-auto flex w-full max-w-[52rem] flex-1 flex-col px-4 pt-20 max-sm:pt-6">
+        <header className="relative mb-16 grid grid-cols-[minmax(0,1fr)_8.47rem] items-start gap-5 sm:grid-cols-[minmax(0,1fr)_14.52rem] sm:gap-8 max-sm:mb-12">
+          <div className="contents sm:block">
+            <div className="self-center pt-1">
+              <h1 className="text-xl font-medium text-black dark:text-white">
+                <Link href="/">Luis Kaiser</Link>
+              </h1>
+              <AnimatedRole>AI Researcher</AnimatedRole>
+            </div>
+            <div className="col-span-2 sm:mt-8">
               <motion.section {...sectionMotion}>
-                <div className="space-y-3 text-zinc-600 dark:text-zinc-400 max-w-[30rem]">
+                <div className="space-y-3 text-zinc-600 dark:text-zinc-400">
                   <p>
-                    PhD in Mathematics at{" "}
+                    PhD in Computational Mathematics at{" "}
                     <a
                       href="https://www.utexas.edu/"
                       target="_blank"
@@ -124,7 +126,7 @@ export default function Home() {
                     </span>
                   </p>
                   <p>
-                    Studied Mathematics at{" "}
+                    Studied Computational Mathematics at{" "}
                     <a
                       href="https://www.tum.de/en/"
                       target="_blank"
@@ -163,38 +165,41 @@ export default function Home() {
                     .
                   </p>
                 </div>
+                <nav className="mt-5 flex flex-wrap items-center gap-2" aria-label="Profile links">
+                  <Pill href="mailto:lkaiser@utexas.edu">
+                    Email
+                  </Pill>
+                  <Pill href="https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en">
+                    Google Scholar
+                  </Pill>
+                  <Pill href="/cv.pdf" ariaLabel="CV (PDF)">
+                    CV
+                  </Pill>
+                  <Pill href="https://www.linkedin.com/in/luiskaiser/">
+                    LinkedIn
+                  </Pill>
+                  <Pill href="https://x.com/luiskaiser_" ariaLabel="X (Twitter)">
+                    X/Twitter
+                  </Pill>
+                </nav>
               </motion.section>
 
             </div>
           </div>
           <aside
-            className="relative z-10 flex w-[9.404762rem] shrink-0 flex-col items-center gap-3 sm:mt-2.5"
+            className="relative z-10 col-start-2 row-start-1 w-full max-w-full shrink-0 sm:mt-2.5 sm:w-[14.52rem]"
             aria-label="Profile"
           >
-            <div className="relative aspect-[79/89] w-full shrink-0 translate-y-[0.4444rem] overflow-hidden">
+            <div className="relative aspect-[79/89] w-full shrink-0 sm:translate-y-[0.4444rem] overflow-hidden">
               <Image
                 src="/images/luis-kaiser.webp"
                 alt="Luis Kaiser"
                 fill
-                sizes="(min-width: 1512px) 10.45vw, 158px"
+                sizes="(min-width: 1512px) 16.6173vw, (min-width: 640px) 252px, 147px"
                 quality={100}
                 priority
                 className="object-cover object-center"
               />
-            </div>
-            <p className="whitespace-nowrap text-center text-sm text-zinc-600 dark:text-zinc-400">
-              lkaiser at utexas dot edu
-            </p>
-            <div className="-mt-1 flex items-center gap-1">
-              <Pill href="https://scholar.google.com/citations?user=AB4exREAAAAJ&hl=en" compact>
-                Scholar
-              </Pill>
-              <Pill href="/cv.pdf" ariaLabel="CV (PDF)" compact>
-                CV
-              </Pill>
-              <Pill href="https://www.linkedin.com/in/luiskaiser/" compact>
-                LinkedIn
-              </Pill>
             </div>
           </aside>
         </header>
@@ -207,53 +212,53 @@ export default function Home() {
           >
             <h2 className="mb-5 text-lg font-medium">Research</h2>
             <div className="space-y-3">
-              <article className="flex min-h-[4.5556rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
-                <div className="relative w-28 shrink-0 bg-black">
+              <article className="research-card flex min-h-[6.5rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+                <div className="relative w-36 shrink-0 bg-black">
                   <Image
                     src="/images/google-x.jpg"
                     alt="X, the Moonshot Factory"
                     fill
-                    sizes="112px"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 87px"
                     loading="eager"
                     className="object-contain"
                   />
                 </div>
-                <div className="min-w-0 flex-1 px-3 py-2">
+                <div className="residency-details flex min-w-0 flex-1 flex-col items-start justify-center px-4 py-2 text-left">
                   <a
                     href="https://x.company/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
+                    className="text-[0.945rem] font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
                   >
                     Google X - PhD Residency
                   </a>
-                  <p className="mt-1 text-[0.81rem] leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-1 text-[0.945rem] leading-snug text-zinc-600 dark:text-zinc-400">
                     Focus areas included self-improving AI and PDEs.
                   </p>
                 </div>
               </article>
 
-              <article className="flex min-h-[5.2778rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
-                <div className="relative w-28 shrink-0">
+              <article className="research-card flex min-h-[6.5rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+                <div className="relative w-36 shrink-0">
                   <Image
                     src="/images/wave-propagation.png"
                     alt="Three-dimensional wave propagation simulation"
                     fill
-                    sizes="112px"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 87px"
                     loading="eager"
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 px-3 py-1">
+                <div className="min-w-0 flex-1 px-4 py-2">
                   <a
                     href="https://link.springer.com/chapter/10.1007/978-3-031-86169-7_2"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
+                    className="text-[0.945rem] font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
                   >
                     Efficient Wave Propagation
                   </a>
-                  <p className="mt-0.5 text-[0.81rem] leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-[0.945rem] leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=6yls9oMAAAAJ&amp;hl=en"
@@ -273,7 +278,7 @@ export default function Home() {
                       Christian Klingenberg
                     </a>
                   </p>
-                  <p className="text-[0.81rem] leading-snug text-zinc-500">
+                  <p className="text-[0.945rem] leading-snug text-zinc-500">
                     ENUMATH23, Springer Nature, 2024
                   </p>
                   <div className="mt-1 flex flex-wrap items-center gap-2">
@@ -296,26 +301,26 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-[4.5556rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
-                <div className="relative w-28 shrink-0">
+              <article className="research-card flex min-h-[6.5rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+                <div className="relative w-36 shrink-0">
                   <Image
                     src="/images/ice-hockey.png"
                     alt="Autonomous ice hockey agent in SuperTuxKart"
                     fill
-                    sizes="112px"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 87px"
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 px-3 py-1">
+                <div className="min-w-0 flex-1 px-4 py-2">
                   <a
                     href="https://github.com/utkaiser/deep_ice_hockey_agent"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
+                    className="text-[0.945rem] font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
                   >
-                    Autonomous Multi-Agent RL in Differential Games
+                    Autonomous Multi-Agent Reinforcement Learning in Differential Games
                   </a>
-                  <p className="mt-0.5 text-[0.81rem] leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-[0.945rem] leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://www.linkedin.com/in/pedro-s-345523345/"
@@ -326,8 +331,8 @@ export default function Home() {
                       Pedro Silva
                     </a>
                   </p>
-                  <p className="text-[0.81rem] leading-snug text-zinc-500">
-                    RL Computer Vision Competition, 2022
+                  <p className="text-[0.945rem] leading-snug text-zinc-500">
+                    Reinforcement Learning Computer Vision Competition, 2022
                   </p>
                   <div className="mt-1 flex items-center gap-2">
                     <Pill
@@ -346,26 +351,26 @@ export default function Home() {
                 </div>
               </article>
 
-              <article className="flex min-h-[4.5556rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
-                <div className="relative w-28 shrink-0">
+              <article className="research-card flex min-h-[6.5rem] overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
+                <div className="relative w-36 shrink-0">
                   <Image
                     src="/images/deep-rl-agents.png"
                     alt="Deep reinforcement learning agents evaluated on financial market data"
                     fill
-                    sizes="112px"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 87px"
                     className="object-cover"
                   />
                 </div>
-                <div className="min-w-0 flex-1 px-3 py-1">
+                <div className="min-w-0 flex-1 px-4 py-2">
                   <a
                     href="https://github.com/utkaiser/neurotrader_thesis"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
+                    className="text-[0.945rem] font-medium leading-snug text-black transition-colors hover:text-zinc-600 dark:text-white dark:hover:text-zinc-300"
                   >
-                    Deep RL for Trading
+                    Deep Reinforcement Learning for Trading
                   </a>
-                  <p className="mt-0.5 text-[0.81rem] leading-snug text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-0.5 text-[0.945rem] leading-snug text-zinc-600 dark:text-zinc-400">
                     <strong className="font-bold">Luis Kaiser</strong>,{" "}
                     <a
                       href="https://scholar.google.com/citations?user=pJB1MsAAAAAJ&amp;hl=de"
@@ -394,7 +399,7 @@ export default function Home() {
                       Andreas Hotho
                     </a>
                   </p>
-                  <p className="text-[0.81rem] leading-snug text-zinc-500">
+                  <p className="text-[0.945rem] leading-snug text-zinc-500">
                     Bachelor thesis, University of Wuerzburg, 2022
                   </p>
                   <div className="mt-1 flex items-center gap-2">
@@ -417,7 +422,7 @@ export default function Home() {
           </motion.section>
         </main>
 
-        <footer className="mt-24 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
+        <footer className="mt-24 max-sm:mt-12 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
           <div className="flex items-center justify-between">
             <div className="relative inline-block whitespace-nowrap text-xs text-zinc-500">
               <span>© {new Date().getFullYear()} Luis Kaiser.</span>
