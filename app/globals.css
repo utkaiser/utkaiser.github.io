@@ -37,19 +37,78 @@ a:focus-visible {
 }
 
 @media (max-width: 639px) {
-  .profile-pill {
-    min-width: 44px;
-    min-height: 44px;
+  .site-content {
+    padding: 24px 20px 28px;
+  }
+
+  .profile-header {
+    grid-template-columns: 80px minmax(0, 1fr);
+    gap: 20px 18px;
+    margin-bottom: 32px;
+  }
+
+  .profile-header aside {
+    grid-column: 1;
+    grid-row: 1;
+    width: 80px;
+  }
+
+  .profile-header aside > div {
+    aspect-ratio: 1;
+    border-radius: 0;
+  }
+
+  .profile-heading {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0;
+  }
+
+  .profile-heading h1 {
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: -0.7px;
+  }
+
+  .profile-heading h1 a {
+    color: #18181b;
+  }
+
+  .profile-heading > p {
+    font-size: 15px;
+    margin-top: 5px;
+  }
+
+  .profile-bio {
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .profile-header nav {
+    gap: 6px 8px;
+    margin-top: 18px;
+  }
+
+  .profile-header .profile-pill {
+    min-height: 36px;
+    min-width: 0;
+    font-size: 13px;
+    padding: 6px 10px;
     justify-content: center;
-    padding-inline: 0.75rem;
-    font-size: 0.875rem;
+  }
+
+  #research h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
   }
 
   .research-card {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.85fr);
+    grid-template-columns: 76px minmax(0, 1fr);
     align-items: start;
-    gap: 0.9rem;
+    gap: 14px;
     min-height: 0;
     padding: 0;
     border: 0;
@@ -58,14 +117,16 @@ a:focus-visible {
   }
 
   .research-card + .research-card {
-    margin-top: 1.75rem;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid #e4e4e7;
   }
 
   .research-card > div:first-child {
     width: 100%;
     height: auto;
-    aspect-ratio: 8 / 5;
-    border-radius: 0;
+    aspect-ratio: 1;
+    border-radius: 5px;
     overflow: hidden;
   }
 
@@ -76,13 +137,15 @@ a:focus-visible {
 
   .research-card > div:last-child > a {
     display: block;
+    font-size: 16px;
+    color: #18181b;
     font-weight: 600;
     line-height: 1.35;
   }
 
   .research-card p {
     margin-top: 0.35rem;
-    font-size: 0.8125rem;
+    font-size: 14px;
     line-height: 1.45;
   }
 

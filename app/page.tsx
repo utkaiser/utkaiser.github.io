@@ -63,10 +63,10 @@ const sectionMotion = {
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
-      <div className="mx-auto flex w-full max-w-[52rem] flex-1 flex-col px-4 pt-20 max-sm:pt-6">
-        <header className="relative mb-16 grid grid-cols-[minmax(0,1fr)_8.47rem] items-start gap-5 sm:grid-cols-[minmax(0,1fr)_14.52rem] sm:gap-8 max-sm:mb-12">
+      <div className="site-content mx-auto flex w-full max-w-[52rem] flex-1 flex-col px-4 pt-20 max-sm:pt-6">
+        <header className="profile-header relative mb-16 grid grid-cols-[minmax(0,1fr)_8.47rem] items-start gap-5 sm:grid-cols-[minmax(0,1fr)_14.52rem] sm:gap-8 max-sm:mb-12">
           <div className="contents sm:block">
-            <div className="self-center pt-1">
+            <div className="profile-heading self-center pt-1">
               <h1 className="text-xl font-medium text-black dark:text-white">
                 <Link href="/">Luis Kaiser</Link>
               </h1>
@@ -74,7 +74,7 @@ export default function Home() {
             </div>
             <div className="col-span-2 sm:mt-8">
               <motion.section {...sectionMotion}>
-                <div className="space-y-3 text-zinc-600 dark:text-zinc-400">
+                <div className="profile-bio space-y-3 text-zinc-600 dark:text-zinc-400">
                   <p>
                     PhD in Computational Mathematics at{" "}
                     <a
@@ -195,7 +195,7 @@ export default function Home() {
                 src="/images/luis-kaiser.webp"
                 alt="Luis Kaiser"
                 fill
-                sizes="(min-width: 1512px) 16.6173vw, (min-width: 640px) 252px, 147px"
+                sizes="(min-width: 1512px) 16.6173vw, (min-width: 640px) 252px, 80px"
                 quality={100}
                 priority
                 className="object-cover object-center"
@@ -218,7 +218,7 @@ export default function Home() {
                     src="/images/google-x.jpg"
                     alt="X, the Moonshot Factory"
                     fill
-                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 33vw"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 76px"
                     loading="eager"
                     className="object-contain"
                   />
@@ -244,7 +244,7 @@ export default function Home() {
                     src="/images/wave-propagation.png"
                     alt="Three-dimensional wave propagation simulation"
                     fill
-                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 33vw"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 76px"
                     loading="eager"
                     className="object-cover"
                   />
@@ -307,7 +307,7 @@ export default function Home() {
                     src="/images/ice-hockey.png"
                     alt="Autonomous ice hockey agent in SuperTuxKart"
                     fill
-                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 33vw"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 76px"
                     className="object-cover"
                   />
                 </div>
@@ -357,7 +357,7 @@ export default function Home() {
                     src="/images/deep-rl-agents.png"
                     alt="Deep reinforcement learning agents evaluated on financial market data"
                     fill
-                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 33vw"
+                    sizes="(min-width: 1512px) 10.3vw, (min-width: 640px) 156px, 76px"
                     className="object-cover"
                   />
                 </div>
