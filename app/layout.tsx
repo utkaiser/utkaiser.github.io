@@ -14,6 +14,13 @@ const interTight = Inter_Tight({
 });
 
 const siteUrl = "https://luiskaiser.com";
+const portraitUrl = `${siteUrl}/images/luis-kaiser.webp`;
+const portrait = {
+  url: portraitUrl,
+  width: 1796,
+  height: 2235,
+  alt: "Luis Kaiser",
+};
 const profileTitle = "Luis Kaiser | AI Researcher at Google X";
 const profileDescription =
   "Luis Kaiser is an AI researcher at Google X and an applied mathematics PhD working on reinforcement learning, continual learning, and AI for science.";
@@ -47,11 +54,13 @@ export const metadata: Metadata = {
     firstName: "Luis",
     lastName: "Kaiser",
     locale: "en_US",
+    images: [portrait],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: profileTitle,
     description: profileDescription,
+    images: [portrait],
   },
   robots: {
     index: true,
@@ -84,6 +93,7 @@ const structuredData = {
       name: profileTitle,
       isPartOf: { "@id": `${siteUrl}/#website` },
       mainEntity: { "@id": `${siteUrl}/#person` },
+      primaryImageOfPage: { "@id": `${siteUrl}/#portrait` },
       inLanguage: "en-US",
     },
     {
@@ -92,10 +102,7 @@ const structuredData = {
       name: "Luis Kaiser",
       url: `${siteUrl}/`,
       image: {
-        "@type": "ImageObject",
-        url: `${siteUrl}/images/luis-kaiser.webp`,
-        width: 1796,
-        height: 2235,
+        "@id": `${siteUrl}/#portrait`,
       },
       jobTitle: "AI Researcher",
       description: profileDescription,
@@ -133,6 +140,15 @@ const structuredData = {
         "https://www.linkedin.com/in/luiskaiser/",
         "https://github.com/utkaiser",
       ],
+    },
+    {
+      "@type": "ImageObject",
+      "@id": `${siteUrl}/#portrait`,
+      url: portraitUrl,
+      contentUrl: portraitUrl,
+      width: portrait.width,
+      height: portrait.height,
+      caption: portrait.alt,
     },
   ],
 };
